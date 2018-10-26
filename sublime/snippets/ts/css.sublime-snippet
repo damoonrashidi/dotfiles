@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+export const ${1:className} = css({
+  ${2}
+});
+]]></content>
+    <tabTrigger>css</tabTrigger>
+    <scope>source.ts</scope>
+    <description>export css class for glamor</description>
+</snippet>

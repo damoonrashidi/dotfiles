@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+describe('${1}', () => {
+  it('should ${2:do something}', () => {
+    $3
+  });
+});
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>desc</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.ts</scope>
+</snippet>

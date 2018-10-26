@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { ${1} } from './${2}.interface';
+
+Injectable()
+export class ${1}Service {
+  constructor(private http: HttpClient) {}
+
+  ${3}
+}
+]]></content>
+    <tabTrigger>@service</tabTrigger>
+    <scope>source.ts</scope>
+    <description>angular service snippet</description>
+</snippet>

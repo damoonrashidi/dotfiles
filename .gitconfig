@@ -1,0 +1,5 @@
+[user]
+  email = damoon.rashidi@gmail.com
+  name = Damoon Rashidi
+[core]
+  pager = diff-so-fancy | less --tabs=2 -RFX

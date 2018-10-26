@@ -1,0 +1,11 @@
+[
+  { "keys": ["super+shift+r"], "command": "reveal_in_side_bar" },
+  { "keys": ["super+b"], "command": "js_prettier" },
+  {
+    "keys": ["option+f"],
+    "command": "insert_snippet",
+    "args": {
+      "name": "Packages/User/snippets/ts/lambda-snippet.sublime-snippet"
+    }
+  }
+]

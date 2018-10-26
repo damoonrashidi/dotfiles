@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+${1:name}(${2:args}): ${3} {
+  ${4}
+}
+]]></content>
+    <tabTrigger>fn</tabTrigger>
+    <scope>source.ts</scope>
+    <description>Create a class function</description>
+</snippet>
