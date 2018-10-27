@@ -27,7 +27,7 @@ export class ${2:MyComponent}Component implements OnInit {
 }
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>@smartcomponent</tabTrigger>
+  <tabTrigger>@stateful</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.ts</scope>
 </snippet>
