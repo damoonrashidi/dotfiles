@@ -1,7 +1,7 @@
 export EDITOR="nano"
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/damoonrashidi/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -23,7 +23,7 @@ ZSH_THEME="theunraveler"
 export UPDATE_ZSH_DAYS=1
 
 # Android SDK stuff
-export ANDROID_HOME="/Users/damoonrashidi/tools/android"
+export ANDROID_HOME="~/tools/android"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -60,35 +60,12 @@ plugins=(git osx zsh-autosuggestions colorize)
 DEFAULT_USER="damoonrashidi"
 prompt_context(){}
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/damoonrashidi/.rvm/gems/ruby-2.2.1/bin:/Users/damoonrashidi/.rvm/gems/ruby-2.2.1@global/bin:/Users/damoonrashidi/.rvm/rubies/ruby-2.2.1/bin:/Users/damoonrashidi/.rvm/bin:/Users/damoonrashidi/tools/arcanist/bin:/Users/damoonrashidi/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.rvm/gems/ruby-2.2.1/bin:~/.rvm/gems/ruby-2.2.1@global/bin:~/.rvm/rubies/ruby-2.2.1/bin:~/.rvm/bin:~/tools/arcanist/bin:~/.rvm/bin"
 export PATH="./node_modules/.bin:$PATH"
-export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
-
-source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Brew
 export PATH="/usr/local/sbin:$PATH"
-
-# composer
-export PATH="/Users/damoonrashidi/.composer/vendor/bin:$PATH"
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="~/tools/flutter/bin":$PATH
+source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -96,18 +73,16 @@ export PATH="/Users/damoonrashidi/.composer/vendor/bin:$PATH"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gstat="git status"
+alias gph="gp -u origin HEAD"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
 alias tunnel-staging="ssh -A -L 3306:127.0.0.1:3306 damoonrashidi@stage-full-601.freespee.net"
-alias emu="/Users/damoonrashidi/tools/android/emulator/emulator"
+alias emu="~/tools/android/emulator/emulator"
 alias fs="du -sch"
 alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc"
 
-export PATH="/Users/damoonrashidi/tools/flutter/bin":$PATH
 
 
 # Load zsh-autosuggestions.
@@ -195,3 +170,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_MAXLENGTH=100
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
