@@ -15,6 +15,10 @@ $(brew --prefix)/opt/fzf/install
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+#install itermocil
+brew install TomAnthony/brews/itermocil
+
 cp .zshrc ~/.zshrc
 cp .fzf.zsh ~/.fzf.zsh
 cp .gitconfig ~/.gitconfig
+
