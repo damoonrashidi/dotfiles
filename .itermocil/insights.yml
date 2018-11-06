@@ -1,0 +1,10 @@
+windows:
+  - name: insights
+    root: ~/dev/www/
+    layout: double-main-vertical
+    panes:
+      - cd core-insights
+      - cd core-insights && yarn start
+      - cd graphql && yarn dev
+      - tunnel-staging
+      - cd graphql && echo "graphql"
