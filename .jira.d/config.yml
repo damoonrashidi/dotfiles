@@ -1,0 +1,15 @@
+endpoint: https://freespee.atlassian.net
+user: damoon.rashidi@freespee.com
+password-source: keyring
+custom-commands:
+  - name: mine
+    help: display issues assigned to me
+    script: |-
+      {{jira}} list --query "resolution = unresolved and assignee=currentuser() ORDER BY created"
+  - name: claim
+    help: Assign an issue to me
+    args:
+      - name: ISSUE
+        required: true
+    script: |-
+      {{jira}} take {{args.ISSUE}} "damoon.rashidi"
