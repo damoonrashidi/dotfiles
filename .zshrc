@@ -23,7 +23,7 @@ ZSH_THEME="theunraveler"
 export UPDATE_ZSH_DAYS=1
 
 # Android SDK stuff
-export ANDROID_HOME="~/tools/android"
+export ANDROID_HOME="/Users/damoonrashidi/tools/android"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -63,8 +63,8 @@ prompt_context(){}
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.rvm/gems/ruby-2.2.1/bin:~/.rvm/gems/ruby-2.2.1@global/bin:~/.rvm/rubies/ruby-2.2.1/bin:~/.rvm/bin:~/tools/arcanist/bin:~/.rvm/bin"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="~/.composer/vendor/bin:$PATH"
-export PATH="~/tools/flutter/bin":$PATH
+export PATH="/Users/damoonrashidi/.composer/vendor/bin:$PATH"
+export PATH="/Users/damoonrashidi/tools/flutter/bin":$PATH
 source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -79,7 +79,7 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
 alias tunnel-staging="ssh -A -L 3306:127.0.0.1:3306 damoonrashidi@stage-full-601.freespee.net"
-alias emu="~/tools/android/emulator/emulator"
+alias emu="/Users/damoonrashidi/tools/android/emulator/emulator"
 alias fs="du -sch"
 alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc"
 
