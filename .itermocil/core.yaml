@@ -1,0 +1,9 @@
+windows:
+  - name: core
+    root: ~/
+    layout: tiled
+    panes:
+      - cd ~/VagrantBoxes/virtualbox && vagrant up && vagrant ssh
+      - cd ~/VagrantBoxes/virtualbox
+      - cd ~/dev/www/core-analytics
+      - cd ~/dev/www/core-analytics
