@@ -75,6 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias gstat="git status"
 alias gph="gp -u origin HEAD"
+alias glogb="git log --graph --abbrev-commit --decorate --first-parent"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
@@ -172,3 +173,13 @@ ZSH_HIGHLIGHT_MAXLENGTH=100
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/slss.zshexport PATH="/usr/local/opt/libxml2/bin:$PATH"
