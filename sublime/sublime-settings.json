@@ -5,11 +5,11 @@
   "caret_extra_top": 0,
   "caret_extra_width": 8,
   "caret_style": "phase",
-  "color_scheme":
-    "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+  "color_scheme": "Packages/User/freespee.tmTheme",
   "dart_sdk_path": "/usr/local/opt/dart/libexec",
   "detect_indentation": true,
   "draw_indent_guides": false,
+  "draw_white_space": false,
   "enable_tab_scrolling": false,
   "file_exclude_patterns": [
     "*.pyc",
@@ -43,9 +43,9 @@
     ".fusebox",
     "node_modules",
     "build",
-    "dist",
     "output",
     "typings",
+    "dist",
     "coverage",
     ".vscode",
     "vendor",
@@ -56,11 +56,13 @@
     "CVS",
     ".sass-cache",
     ".idea",
-    ".stencil"
+    ".stencil",
+    ".cache",
+    "cypress"
   ],
   "font_face": "Source code pro",
   "font_options": "no_liga",
-  "font_size": 10,
+  "font_size": 14,
   "ignored_packages": [
     "Autocomplete Javascript with Method Signature",
     "DocBlockr",
@@ -84,10 +86,11 @@
   "predawn_quick_panel_small": false,
   "predawn_tabs_active_underline": false,
   "predawn_tabs_small": true,
+  "search_case_sensitivity": false,
   "tab_size": 2,
-  "theme": "Spacegray Eighties.sublime-theme",
+  "theme": "ayu-dark.sublime-theme",
   "translate_tabs_to_spaces": true,
-  "typescript_plugin_tsc_version": "2.5.3",
+  "typescript_plugin_tsc_version": "3.3.3",
   "use_tab_stops": true,
-  "word_wrap": "true"
+  "word_wrap": true
 }
