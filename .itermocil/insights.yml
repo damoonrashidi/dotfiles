@@ -1,10 +1,14 @@
 windows:
   - name: insights
     root: ~/dev/www/
-    layout: double-main-vertical
+    layout: 3_columns
     panes:
-      - cd ~/dev/www/core-insights
       - cd ~/dev/www/core-insights && yarn start
-      - cd ~/dev/www/core-graphql && yarn dev
+      - cd ~/dev/www/login.freespee.com && yarn start
+      - cd ~/dev/www/auth.freespee.com && yarn start:dev
+      - cd ~/dev/www/core-graphql-nest && yarn start:dev
+      - cd ~/dev/www/core-insights
+      - cd ~/dev/www/core-graphql-nest
+      - cd ~/dev/www/auth.freespee.com
+      - cd ~/dev/www/login.freespee.com
       - tunnel-staging
-      - cd ~/dev/www/core-graphql
