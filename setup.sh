@@ -18,6 +18,14 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 #install itermocil
 brew install TomAnthony/brews/itermocil
 
+#this will install latest node as a dependency
+brew install yarn
+
+
+#install a bunch of other tools
+brew cask install google-chrome
+brew cask install slack
+
 cp .zshrc ~/.zshrc
 cp .fzf.zsh ~/.fzf.zsh
 cp .gitconfig ~/.gitconfig
