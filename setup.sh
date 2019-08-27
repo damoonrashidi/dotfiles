@@ -24,7 +24,10 @@ brew install yarn
 
 #install a bunch of other tools
 brew cask install google-chrome
+brew cask install kitematic
 brew cask install slack
+brew install httpie
+brew install docker
 
 cp .zshrc ~/.zshrc
 cp .fzf.zsh ~/.fzf.zsh

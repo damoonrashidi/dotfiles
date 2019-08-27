@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+describe('${1:My feature}', () => {
+  it('should ${2:do something}', () => {
+    $3
+  });
+});
+]]></content>
+    <tabTrigger>@desc</tabTrigger>
+    <scope>source.ts</scope>
+    <description>Describe</description>
+</snippet>

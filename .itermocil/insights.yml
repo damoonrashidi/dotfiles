@@ -1,14 +1,39 @@
 windows:
   - name: insights
-    root: ~/dev/www/
-    layout: 3_columns
+    root: ~/dev/
     panes:
-      - cd ~/dev/www/core-insights && yarn start
-      - cd ~/dev/www/login.freespee.com && yarn start
-      - cd ~/dev/www/auth.freespee.com && yarn start:dev
-      - cd ~/dev/www/core-graphql-nest && yarn start:dev
-      - cd ~/dev/www/core-insights
-      - cd ~/dev/www/core-graphql-nest
-      - cd ~/dev/www/auth.freespee.com
-      - cd ~/dev/www/login.freespee.com
-      - tunnel-staging
+      - commands:
+          - cd ~/dev/core-insights
+          - yarn start
+        name: insights server
+      - commands:
+          - cd ~/dev/login.freespee.com
+          - yarn start
+        name: login server
+      - commands:
+          - cd ~/dev/auth.freespee.com
+          - yarn start:dev
+        name: auth server
+      - commands:
+          - cd ~/dev/core-graph
+          - yarn start:dev
+        name: graphql server
+      - commands:
+          - cd ~/dev/core-insights
+        name: insights
+      - commands:
+          - cd ~/dev/core-graph
+        name: core-graph
+      - commands:
+          - cd ~/dev/auth.freespee.com
+        name: auth
+      - commands:
+          - cd ~/dev/login.freespee.com
+        name: login
+      - commands:
+          - cd ~/dev/auth.freespee.com
+          - docker-compose up
+        name: redis
+      - commands:
+          - tunnel-staging
+        name: tunnel-staging

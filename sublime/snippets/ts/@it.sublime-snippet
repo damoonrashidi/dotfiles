@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+it('should ${1:do something}', () => {
+  $2
+});
+]]></content>
+    <tabTrigger>@it</tabTrigger>
+    <scope>source.ts</scope>
+    <description>It does something</description>
+</snippet>
