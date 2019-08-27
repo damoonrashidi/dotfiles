@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AppState } from '#app/interfaces';
-import * as css from './${1:my-component}.styles'
+import * as css from './${1:my-component}.styles';
 
 @Component({
   selector: 'app-${1:my-component}',

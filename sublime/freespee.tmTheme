@@ -37,10 +37,21 @@
 			<string>comment</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
+				<key>background</key>
+				<string>#0A1C2F</string>
 				<key>foreground</key>
-				<string>#627486</string>
+				<string>#a55a55</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>inline code</string>
+			<key>scope</key>
+			<string>meta.template.expression.ts, variable.other.readwrite.ts</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#fff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -63,8 +74,6 @@
 			<string>entity</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#dffc86</string>
 			</dict>
@@ -77,7 +86,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string> bold</string>
+				<string>bold</string>
 				<key>foreground</key>
 				<string>#7AADE1</string>
 			</dict>
@@ -90,7 +99,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string> bold</string>
+				<string>bold</string>
 				<key>foreground</key>
 				<string>#7AADE1</string>
 			</dict>
@@ -132,31 +141,17 @@
 				<string>#f6f8fa</string>
 			</dict>
 		</dict>
-		<!-- IMPORTANT STUFF ENDS HERE -->
 		<dict>
 			<key>name</key>
-			<string>Invalid – Deprecated</string>
+			<string>Invalid</string>
 			<key>scope</key>
-			<string>invalid.deprecated</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic underline</string>
-				<key>foreground</key>
-				<string>#F69198</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Invalid – Illegal</string>
-			<key>scope</key>
-			<string>invalid.illegal</string>
+			<string>invalid</string>
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#562D56BF</string>
+				<string>#ff0000</string>
 				<key>foreground</key>
-				<string>#f53459</string>
+				<string>#ffffff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -164,6 +159,28 @@
 			<string>-----------------------------------</string>
 			<key>settings</key>
 			<dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Inline Markdown</string>
+			<key>scope</key>
+			<string>markup.heading.1.markdown, markup.heading.2.markdown, entity.name.section.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#98AAE3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Inline Markdown</string>
+			<key>scope</key>
+			<string>markup.raw.inline.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#7AADE1</string>
 			</dict>
 		</dict>
 		<dict>
@@ -186,6 +203,53 @@
 			<dict>
 				<key>background</key>
 				<string>#B1B3BA21</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>meta invocation</string>
+			<key>scope</key>
+			<string>function.name, meta.import.ts, keyword.control.import</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F69198</string>
+			</dict>
+		</dict>
+		<!-- IMPORTANT STUFF ENDS HERE -->
+		<dict>
+			<key>name</key>
+			<string>JSON key</string>
+			<key>scope</key>
+			<string>text.xml</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JSON key</string>
+			<key>scope</key>
+			<string>string.quoted.double.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FAD061</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JSON value</string>
+			<key>scope</key>
+			<string>constant.language.json, meta.mapping.value.json, meta.sequence.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>##0E3A66</string>
+				<key>background</key>
+				<string>#ffffff00</string>
 			</dict>
 		</dict>
 		<dict>
@@ -263,8 +327,6 @@
 			<string>support.function</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#7AADE1</string>
 			</dict>
@@ -306,13 +368,46 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>✘ Doctype&#x2f;XML Processing</string>
+			<string>✘ Meta.tag.custom</string>
 			<key>scope</key>
-			<string>meta.tag.sgml.doctype, meta.tag.sgml.doctype entity, meta.tag.sgml.doctype string, meta.tag.preprocessor.xml, meta.tag.preprocessor.xml entity, meta.tag.preprocessor.xml string</string>
+			<string>entity.name.tag.custom.html</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#4D4D4D</string>
+				<string>#7AADE1</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>✘ Meta.tag.custom</string>
+			<key>scope</key>
+			<string>entity.other.attribute-name.template.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F7CB5E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>✘ Meta.tag.bind</string>
+			<key>scope</key>
+			<string>meta.attribute-with-value.bind, entity.other.attribute-name.bind.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F69198</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>✘ Meta.tag.on</string>
+			<key>scope</key>
+			<string>entity.other.attribute-name.on, entity.other.attribute-name.on.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FAD061</string>
 			</dict>
 		</dict>
 		<dict>

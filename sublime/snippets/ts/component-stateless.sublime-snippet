@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[
 import { Component, HostBinding, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import * as css from './${1}.styles'
+import * as css from './${1}.styles';
 
 @Component({
   selector: 'app-${1}',
-  changeDetection: ChangeDetectionStrategy.ON_PUSH,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     ${2}
   `,
