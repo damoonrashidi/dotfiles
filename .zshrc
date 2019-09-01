@@ -76,6 +76,10 @@ source $ZSH/oh-my-zsh.sh
 alias gstat="git status"
 alias gph="gp -u origin HEAD"
 alias glogb="git log --graph --abbrev-commit --decorate --first-parent"
+alias gcod="gco develop"
+alias gcom="gco master"
+alias grbd="grb -i develop"
+alias gmd="gm develop"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
@@ -87,8 +91,9 @@ alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v
 
 
 # Load zsh-autosuggestions.
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugins=(zsh-autosuggestions zsh-iterm-touchbar)
+source /Users/damoonrashidi/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_MAXLENGTH=100
 
 
 ###-begin-ng-completion###
@@ -165,10 +170,6 @@ function diff {
   colordiff -u "$@" | less -RF
 }
 
-
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_MAXLENGTH=100
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
