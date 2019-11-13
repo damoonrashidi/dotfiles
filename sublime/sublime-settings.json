@@ -62,16 +62,22 @@
     "cypress",
     "documentation"
   ],
-  "font_face": "Source code pro",
+  "font_face": "Inconsolata",
   "font_options": "no_liga",
-  "font_size": 14,
-  "ignored_packages": ["DocBlockr", "JsPrettier", "Theme - Soda", "Vintage"],
+  "font_size": 13,
+  "ignored_packages": [
+    "DocBlockr",
+    "Go To Definition",
+    "Theme - Soda",
+    "Vintage"
+  ],
   "line_padding_bottom": 0,
   "search_case_sensitivity": false,
   "tab_size": 2,
   "theme": "ayu-dark.sublime-theme",
   "translate_tabs_to_spaces": true,
   "typescript_plugin_tsc_version": "3.3.3",
+  "enable_inline_error_tips": true,
   "use_tab_stops": true,
   "word_wrap": true
 }
