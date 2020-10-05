@@ -3,3 +3,7 @@
   name = Damoon Rashidi
 [core]
   pager = diff-so-fancy | less --tabs=2 -RFX
+	editor = subl -n -w
+
+[fetch]
+  prune = true

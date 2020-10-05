@@ -1,4 +1,4 @@
-export EDITOR="nano"
+export EDITOR="subl -w -n"
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -65,6 +65,9 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/damoonrashidi/.composer/vendor/bin:$PATH"
 export PATH="/Users/damoonrashidi/tools/flutter/bin":$PATH
+export PATH="/Users/damoonrashidi/tools":$PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/opt/arcanist/bin:$PATH"
+export GEM_HOME="$HOME/.gem"
 source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -80,6 +83,7 @@ alias gcod="gco develop"
 alias gcom="gco master"
 alias grbd="grb -i develop"
 alias gmd="gm develop"
+alias grmm="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
@@ -87,7 +91,10 @@ alias tunnel-staging="ssh -A -L 3306:127.0.0.1:3306 damoonrashidi@stage-full-601
 alias emu="/Users/damoonrashidi/tools/android/emulator/emulator"
 alias fs="du -sch"
 alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc"
-
+alias fucking-touchbar="sudo pkill TouchBarServer"
+function csv() {
+  column -s, -t < "$1" | less -#2 -N -S
+}
 
 
 # Load zsh-autosuggestions.
@@ -172,6 +179,9 @@ function diff {
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if type ag &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='ag -p ~/.fzfignore -g ""'
+fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -184,3 +194,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/slss.zshexport PATH="/usr/local/opt/libxml2/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+alias python=/usr/local/bin/python3.7
