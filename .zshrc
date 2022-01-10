@@ -35,7 +35,7 @@ export ANDROID_HOME="/Users/damoonrashidi/tools/android"
 ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -54,7 +54,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx zsh-autosuggestions colorize)
+plugins=(git osx zsh-autosuggestions colorize zsh-iterm-touchbar aws)
+autoload -U compinit && compinit
 
 # User configuration
 DEFAULT_USER="damoonrashidi"
@@ -65,10 +66,17 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/damoonrashidi/.composer/vendor/bin:$PATH"
 export PATH="/Users/damoonrashidi/tools/flutter/bin":$PATH
+export PATH="/Users/damoonrashidi/tools/android/platform-tools:$PATH"
 export PATH="/Users/damoonrashidi/tools":$PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/opt/arcanist/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export GEM_HOME="$HOME/.gem"
+export WEB3_RPC_URL="http://localhost:7545"
+export WEB3_PRIVATE_KEY=1b945a5ba69098b1bbeb08edab9c7494e4cec48d5b5401847fea3fb420def9d6
 source $ZSH/oh-my-zsh.sh
+
+
+
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -83,6 +91,8 @@ alias gcod="gco develop"
 alias gcom="gco master"
 alias grbd="grb -i develop"
 alias gmd="gm develop"
+alias gbauthor="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' --sort=committerdate"
+alias gflict="git diff --name-only --diff-filter=U"
 alias grmm="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
@@ -98,7 +108,6 @@ function csv() {
 
 
 # Load zsh-autosuggestions.
-plugins=(zsh-autosuggestions zsh-iterm-touchbar)
 source /Users/damoonrashidi/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_MAXLENGTH=100
 
@@ -185,6 +194,10 @@ fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+
+zstyle ':completion:*' fzf-search-display true
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
@@ -198,4 +211,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-alias python=/usr/local/bin/python3.7
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/damoonrashidi/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/damoonrashidi/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+# if [ -f '/Users/damoonrashidi/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/damoonrashidi/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

@@ -15,12 +15,8 @@ $(brew --prefix)/opt/fzf/install
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-#install itermocil
-brew install TomAnthony/brews/itermocil
-
 #this will install latest node as a dependency
 brew install yarn
-
 
 #install a bunch of other tools
 brew cask install google-chrome
