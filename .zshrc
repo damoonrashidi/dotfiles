@@ -1,4 +1,4 @@
-export EDITOR="subl -w -n"
+export EDITOR="zed"
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -7,7 +7,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="theunraveler"
+# ZSH_THEME="theunraveler"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -20,7 +20,7 @@ ZSH_THEME="theunraveler"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=1
+export UPDATE_ZSH_DAYS=7
 
 # Android SDK stuff
 export ANDROID_HOME="/Users/damoonrashidi/tools/android"
@@ -52,14 +52,16 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx zsh-autosuggestions colorize zsh-iterm-touchbar aws)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git macos zsh-autosuggestions colorize aws)
 autoload -U compinit && compinit
 
 # User configuration
 DEFAULT_USER="damoonrashidi"
-prompt_context(){}
+prompt_context(){
+  prompt_git
+}
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.rvm/gems/ruby-2.2.1/bin:~/.rvm/gems/ruby-2.2.1@global/bin:~/.rvm/rubies/ruby-2.2.1/bin:~/.rvm/bin:~/tools/arcanist/bin:~/.rvm/bin"
 export PATH="./node_modules/.bin:$PATH"
@@ -70,6 +72,9 @@ export PATH="/Users/damoonrashidi/tools/android/platform-tools:$PATH"
 export PATH="/Users/damoonrashidi/tools":$PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/opt/arcanist/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Users/damoonrashidi/.deno/bin:$PATH"
+export PATH="/Users/damoonrashidi/.cargo/bin:$PATH"
 export GEM_HOME="$HOME/.gem"
 export WEB3_RPC_URL="http://localhost:7545"
 export WEB3_PRIVATE_KEY=1b945a5ba69098b1bbeb08edab9c7494e4cec48d5b5401847fea3fb420def9d6
@@ -91,9 +96,10 @@ alias gcod="gco develop"
 alias gcom="gco master"
 alias grbd="grb -i develop"
 alias gmd="gm develop"
+alias gbdm="git branch --merged | grep -v "\*" | xargs git branch -d"
 alias gbauthor="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' --sort=committerdate"
 alias gflict="git diff --name-only --diff-filter=U"
-alias grmm="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
+alias gccb="git rev-parse --abbrev-ref HEAD | pbcopy"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
@@ -101,86 +107,13 @@ alias tunnel-staging="ssh -A -L 3306:127.0.0.1:3306 damoonrashidi@stage-full-601
 alias emu="/Users/damoonrashidi/tools/android/emulator/emulator"
 alias fs="du -sch"
 alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc"
-alias fucking-touchbar="sudo pkill TouchBarServer"
 function csv() {
   column -s, -t < "$1" | less -#2 -N -S
 }
 
 
 # Load zsh-autosuggestions.
-source /Users/damoonrashidi/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_MAXLENGTH=100
-
-
-###-begin-ng-completion###
-#
-# ng command completion script
-#
-# Installation: ng completion >> ~/.bashrc (or ~/.zshrc)
-#
-
-ng_opts='new init build serve generate autocomplete e2e format lint test version'
-init_opts='--dry-run --verbose --blueprint --skip-npm --skip-bower --name'
-new_opts='--dry-run --verbose --blueprint --skip-npm --skip-bower --skip-git --directory'
-build_opts='--environment --output-path --watch --watcher'
-serve_opts='--port --host --proxy --insecure-proxy --watcher --live-reload --live-reload-host
-            --live-reload-port --environment --output-path --ssl --ssl-key --ssl-cert'
-generate_opts='component directive pipe route service'
-test_opts='--watch --browsers --colors --log-level --port --reporters'
-
-if type complete &>/dev/null; then
-  _ng_completion() {
-    local cword pword opts
-
-    COMPREPLY=()
-    cword=${COMP_WORDS[COMP_CWORD]}
-    pword=${COMP_WORDS[COMP_CWORD - 1]}
-
-    case ${pword} in
-      ng) opts=$ng_opts ;;
-      i|init) opts=$init_opts ;;
-      new) opts=$new_opts ;;
-      b|build) opts=$build_opts ;;
-      s|serve|server) opts=$serve_opts ;;
-      g|generate) opts=$generate_opts ;;
-      test) opts=$test_opts ;;
-    esac
-
-    COMPREPLY=( $(compgen -W '${opts}' -- $cword) )
-
-    return 0
-  }
-  complete -o default -F _ng_completion ng
-elif type compctl &>/dev/null; then
-  _ng_completion () {
-    local words cword opts
-    read -Ac words
-    read -cn cword
-    let cword-=1
-
-    case $words[cword] in
-      ng) opts=$ng_opts ;;
-      i|init) opts=$init_opts ;;
-      new) opts=$new_opts ;;
-      b|build) opts=$build_opts ;;
-      s|serve|server) opts=$serve_opts ;;
-      g|generate) opts=$generate_opts ;;
-      test) opts=$test_opts ;;
-    esac
-
-    setopt shwordsplit
-    reply=($opts)
-    unset shwordsplit
-  }
-  compctl -K _ng_completion ng
-fi
-
-###-end-ng-completion###
-
-# zle-line-init() {
-#     zle autosuggest-start
-# }
-# zle -N zle-line-init
 
 function diff {
   colordiff -u "$@" | less -RF
@@ -194,19 +127,7 @@ fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
-
 zstyle ':completion:*' fzf-search-display true
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/damoonrashidi/.config/yarn/global/node_modules/tabtab/.completions/slss.zshexport PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 # tabtab source for packages
 # uninstall by removing these lines
@@ -216,4 +137,12 @@ zstyle ':completion:*' fzf-search-display true
 if [ -f '/Users/damoonrashidi/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/damoonrashidi/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-# if [ -f '/Users/damoonrashidi/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/damoonrashidi/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/Users/damoonrashidi/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/damoonrashidi/Downloads/google-cloud-sdk/completion.zsh.inc'; fisource /Users/damoonrashidi/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+export STARSHIP_CONFIG=~/.config/starship.toml
+eval "$(starship init zsh)"
