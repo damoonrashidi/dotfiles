@@ -1,5 +1,5 @@
-endpoint: https://freespee.atlassian.net
-user: damoon.rashidi@freespee.com
+endpoint: https://adfenix.atlassian.net
+user: damoon.rashidi@adfenix.com
 password-source: keyring
 custom-commands:
   - name: mine

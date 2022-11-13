@@ -1,16 +1,19 @@
 [user]
 	email = damoon.rashidi@gmail.com
   name = Damoon Rashidi
+
 [core]
   pager = diff-so-fancy | less --tabs=2 -RFX
-	editor = code -w
+	editor = zed -W --
 
 [fetch]
   prune = true
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [oh-my-zsh]
 	hide-info = 1
