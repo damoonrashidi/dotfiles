@@ -43,12 +43,20 @@ alias gccb="git rev-parse --abbrev-ref HEAD | pbcopy"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
+alias ls="fzf --preview 'bat {-1} --color=always'"
 alias tunnel-staging="ssh -A -L 3306:127.0.0.1:3306 damoonrashidi@stage-full-601.freespee.net"
 alias emu="/Users/damoonrashidi/tools/android/emulator/emulator"
 alias fs="du -sch"
 alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc"
-function csv() {
+
+csv() {
   column -s, -t < "$1" | less -#2 -N -S
+}
+
+unalias gd
+gd() {
+  preview="git diff $@ --color=always -- {-1}"
+  git diff $@ --name-only | fzf -m --ansi --preview $preview
 }
 
 export STARSHIP_CONFIG=~/.config/starship.toml
