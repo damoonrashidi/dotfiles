@@ -1,10 +1,25 @@
 [user]
 	email = damoon.rashidi@gmail.com
-  name = Damoon Rashidi
+	name = Damoon Rashidi
 
 [core]
-  pager = diff-so-fancy | less --tabs=2 -RFX
-	editor = zed -W --
+  pager = delta
+  editor = hx
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  side-by-side = true
+  line-numbers = true
+  theme = "github"
+
+[merge]
+  conflictStyle = diff3
+
+[diff]
+  colorMoved = default
 
 [fetch]
   prune = true

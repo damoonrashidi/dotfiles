@@ -1,0 +1,20 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-r": "outline::Toggle",
+      "f11": "editor::FindAllReferences",
+      "cmd-[": "pane::GoBack",
+      "cmd-]": "pane::GoForward",
+      "cmd-alt-i": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-.": "project_panel::NewFile",
+      "cmd-,": "project_panel::NewDirectory",
+      "cmd-shift-c": "project_panel::CopyPath"
+    }
+  }
+]

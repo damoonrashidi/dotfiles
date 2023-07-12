@@ -1,0 +1,5 @@
+theme = "rose_pine_moon"
+
+[editor]
+bufferline="always"
+color-modes=true

@@ -46,6 +46,12 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 brew install yarn
 ```
 
+### Install Rust
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
 ### Install a bunch of other tools
 
 ```sh
@@ -53,7 +59,14 @@ brew install --cask google-chrome
 brew install --cask slack
 brew install --cask docker
 brew install --cask warp
+brew install --cask alfred
+brew install --cask bettertouchtool
+brew install --cask rectangle
+brew install --cask sublime-merge
 brew install httpie
+brew install erd
+brew install starship
+brew install delta
 ```
 
 ```sh
