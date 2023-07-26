@@ -6,7 +6,8 @@
       "f11": "editor::FindAllReferences",
       "cmd-[": "pane::GoBack",
       "cmd-]": "pane::GoForward",
-      "cmd-alt-i": "workspace::ToggleRightDock"
+      "cmd-alt-i": "workspace::ToggleRightDock",
+      "cmd-shift-t": "terminal_panel::ToggleFocus"
     }
   },
   {

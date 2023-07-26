@@ -51,19 +51,22 @@ alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v
 alias lg="lazygit"
 alias notes="zed ~/journal/"
 
-function nn() {
-    if [ -z "$1" ]; then
-        zed ~/journal/scratch.md
-    else
-        mkdir ~/journal/`date +%Y`/`date %m`$1.md;
-        touch ~/journal/`date +%Y`/`date +%m`/$1.md;
-        zed ~/journal/`date +%Y`/`date +%m`/$1.md
-    fi
+function note() {
+    current_year=$(date +'%Y')
+    current_month=$(date +'%m')
+    name="${1:-$(date +'%d')}"
+
+    # Create the directory if it doesn't exist
+    mkdir -p ~/journal/$current_year/$current_month
+
+    # Create the file
+    touch ~/journal/$current_year/$current_month/$name.md
+    zed ~/journal/$current_year/$current_month/
 }
+
 function csv() {
   column -s, -t < "$1" | less -#2 -N -S
 }
-
 
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"

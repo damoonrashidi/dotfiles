@@ -7,11 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": "Rosé Pine Dawn",
   "copilot": {
     "disabled_globs": [".env"]
   },
+  "buffer_line_height": {
+    "custom": 2
+  },
   "buffer_font_size": 12,
-  "theme": "Rosé Pine Dawn",
   "buffer_font_family": "Dejavu Sans Mono",
   "buffer_font_features": {
     "calt": true
