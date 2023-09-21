@@ -7,7 +7,8 @@
       "cmd-[": "pane::GoBack",
       "cmd-]": "pane::GoForward",
       "cmd-alt-i": "workspace::ToggleRightDock",
-      "cmd-shift-t": "terminal_panel::ToggleFocus"
+      "cmd-shift-d": "editor::DuplicateLine",
+      "cmd-shift-g": "editor::SelectAllMatches"
     }
   },
   {
@@ -15,7 +16,8 @@
     "bindings": {
       "cmd-.": "project_panel::NewFile",
       "cmd-,": "project_panel::NewDirectory",
-      "cmd-shift-c": "project_panel::CopyPath"
+      "cmd-shift-c": "project_panel::CopyPath",
+      "enter": "project_panel::Open"
     }
   }
 ]

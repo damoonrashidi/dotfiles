@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Rosé Pine Dawn",
+  "theme": "Rosé Pine Moon",
   "copilot": {
     "disabled_globs": [".env"]
   },
@@ -20,7 +20,16 @@
     "calt": true
   },
   "features": {
-    "copilot": true
+    "copilot": false
+  },
+  "semantic_index": {
+    "enabled": true
+  },
+  "assistant": {
+    "default_open_ai_model": "gpt-3.5-turbo-0613"
+  },
+  "inlay_hints": {
+    "enabled": false,
   },
   "vim_mode": false,
   "project_panel": {
