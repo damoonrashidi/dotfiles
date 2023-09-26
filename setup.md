@@ -12,7 +12,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ### Install zed from
 
-[https://zed.dev/releases](https://zed.dev/releases)
+[https://zed.dev/releases/preview](https://zed.dev/releases/preview)
 
 ### Install bat and use it over cat
 
@@ -65,8 +65,8 @@ brew install --cask rectangle
 brew install --cask sublime-merge
 brew install httpie
 brew install erd
+brew install git-delta
 brew install starship
-brew install delta
 ```
 
 ```sh

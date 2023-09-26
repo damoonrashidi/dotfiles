@@ -70,3 +70,5 @@ function csv() {
 
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
+SPACESHIP_PROMPT_ASYNC=FALSE
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"

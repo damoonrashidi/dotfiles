@@ -1,5 +1,9 @@
-theme = "rose_pine_moon"
+theme = "rose_pine_dawn"
 
 [editor]
 bufferline="always"
 color-modes=true
+line-number="relative"
+
+[editor.file-picker]
+hidden = false
