@@ -40,14 +40,10 @@ alias gbdm="git branch --merged | grep -v "\*" | xargs git branch -d"
 alias gbauthor="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' --sort=committerdate"
 alias gflict="git diff --name-only --diff-filter=U"
 alias gccb="git rev-parse --abbrev-ref HEAD | pbcopy"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
 alias ls="erd"
-alias run-proxy="mvn spring-boot:run -Dspring-boot.run.profiles=dev,dev-swagger,clients"
-alias emu="/Users/damoonrashidi/tools/android/emulator/emulator"
 alias fs="du -sch"
-alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc"
 alias lg="lazygit"
 alias notes="zed ~/journal/"
 
@@ -71,4 +67,4 @@ function csv() {
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
 SPACESHIP_PROMPT_ASYNC=FALSE
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

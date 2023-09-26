@@ -65,8 +65,11 @@ brew install --cask rectangle
 brew install --cask sublime-merge
 brew install httpie
 brew install erd
+brew install fzf
 brew install git-delta
 brew install starship
+
+$(brew --prefix)/opt/fzf/install
 ```
 
 ```sh
