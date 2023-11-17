@@ -5,19 +5,20 @@
 //
 // To see all of Zed's default settings without changing your
 // custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+// from the command palette or from `Zed` app cation menu.
 {
-  "theme": "Rosé Pine Moon",
+  "theme": "Rosé Pine Dawn",
   "copilot": {
     "disabled_globs": [".env"]
   },
   "buffer_line_height": {
-    "custom": 2
+    "custom": 2.5
   },
   "buffer_font_size": 12,
-  "buffer_font_family": "Dejavu Sans Mono",
+  "buffer_font_family": "Monaspace Neon",
   "buffer_font_features": {
-    "calt": true
+    "calt": false,
+    "liga": false
   },
   "features": {
     "copilot": false
@@ -29,7 +30,7 @@
     "default_open_ai_model": "gpt-3.5-turbo-0613"
   },
   "inlay_hints": {
-    "enabled": false,
+    "enabled": false
   },
   "vim_mode": false,
   "project_panel": {
@@ -61,13 +62,16 @@
       }
     },
     "TypeScript": {
-      "show_copilot_suggestions": true,
       "format_on_save": {
         "external": {
           "command": "prettier",
           "arguments": ["--stdin-filepath", "{buffer_path}"]
         }
       }
+    },
+    "Svelte": {
+      "formatter": "prettier",
+      "format_on_save": "on"
     },
     "CSS": {
       "format_on_save": {
@@ -96,12 +100,30 @@
     "default_width": 500
   },
   "lsp": {
-    "rust_analyzer": {
+    "rust-analyzer": {
       "initialization_options": {
         "checkOnSave": {
           "command": "clippy"
         }
       }
+    },
+    "eslint": {
+      "initialization_options": {
+        "checkOnSave": {
+          "command": "eslint"
+        }
+      },
+      "probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "svelte"
+      ],
+      "validate": ["javascript", "typescript", "javascriptreact", "svelte"]
     }
   }
 }

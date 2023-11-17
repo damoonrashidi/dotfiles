@@ -3,6 +3,9 @@
     "context": "Editor",
     "bindings": {
       "cmd-r": "outline::Toggle",
+      "cmd-shift-r": "project_symbols::Toggle",
+      "alt-ctrl-right": "editor::GoToHunk",
+      "alt-ctrl-left": "editor::GoToPrevHunk",
       "f11": "editor::FindAllReferences",
       "cmd-[": "pane::GoBack",
       "cmd-]": "pane::GoForward",

@@ -1,16 +1,34 @@
+[language-server.c-sharp]
+command = "dotnet"
+args = ["/opt/homebrew/bin/omnisharp", "--languageserver"]
+
+[language-server.efm-lsp-prettier]
+command = "efm-langserver"
+
+[language-server.efm-lsp-prettier.config]
+documentFormatting = true
+languages = { typescript = [ { formatCommand ="prettier --stdin-filepath ${INPUT}", formatStdin = true } ] }
+
+# [language-server.svelteserver]
+# command = "svelteserver"
+# args = ["--stdio"]
+
+[language-server.svelteserver.config.configuration.typescript]
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+inlayHints.parameterNames.enabled = "all"
+
+[language-server.svelteserver.config.configuration.javascript]
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+inlayHints.parameterNames.enabled = "all"
 
 [[language]]
-name = "typescript"
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
-
-[[language]]
-name = "tsx"
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
-
-[[language]]
-name = "html"
-formatter = { command = "prettier", args = ["--parser", "html"] }
-
-[[language]]
-name = "json"
-formatter = { command = "prettier", args = ["--parser", "json"] }
+name = "svelte"
+auto-format = true

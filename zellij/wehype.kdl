@@ -1,0 +1,43 @@
+layout borderless=true {
+    tab name="Brand" cwd="~/dev/wehype/brand/frontend/avalon" focus=true {
+        pane split_direction="horizontal" {
+            pane size="75%" command="hx" {
+                args "."
+            }
+            pane split_direction="vertical" {
+                pane command="npm" {
+                    args "run" "dev"
+                }
+                pane
+            }
+        }
+    }
+    tab name="UI" cwd="~/dev/svelte-ui" {
+        pane split_direction="horizontal" {
+            pane size="75%" command="hx" {
+                args "."
+            }
+            pane split_direction="vertical" {
+                pane command="npm" {
+                    args "run" "storybook"
+                }
+                pane
+            }
+        }
+    }
+    tab name="Backend" cwd="~/dev/wehype/Backend" {
+        pane command="hx" {
+            args "."
+        }
+    }
+    default_tab_template {
+        // the default zellij tab-bar and status bar plugins
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}
