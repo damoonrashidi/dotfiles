@@ -1,30 +1,33 @@
 export EDITOR="/opt/homebrew/bin/hx"
 export TERM="xterm-256color"
 export ZSH=~/.oh-my-zsh
-export UPDATE_ZSH_DAYS=7
+export UPDATE_ZSH_DAYS=14
 
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git macos)
+plugins=(git macos rust)
 
 # User configuration
 DEFAULT_USER="damoonrashidi"
+
+source $ZSH/oh-my-zsh.sh
+source ~/.secretrc
+source ~/.workrc
 
 # ============ PATHS ============
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/bin/zsh:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/Users/damoonrashidi/.deno/bin:$PATH"
 export PATH="/Users/damoonrashidi/.cargo/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="$PATH:/opt/homebrew/bin/jdtls"
-export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
-
-source $ZSH/oh-my-zsh.sh
-source ~/.secretrc
+export PATH="/opt/homebrew/bin/omnisharp:$PATH"
+export PATH="/opt/homebrew/bin/svelteserver:$PATH"
+export PATH="/opt/homebrew/bin/typescript-language-server:$PATH"
+export PATH="/opt/homebrew/bin/graphql-lsp:$PATH"
+export PATH="/opt/homebrew/bin/omnisharp:$PATH"
 
 # ============ ALIASES ============
 
@@ -42,10 +45,10 @@ alias gflict="git diff --name-only --diff-filter=U"
 alias gccb="git rev-parse --abbrev-ref HEAD | pbcopy"
 alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
-alias ls="erd"
 alias fs="du -sch"
 alias lg="lazygit"
 alias notes="zed ~/journal/"
+alias z="zellij"
 
 function note() {
     current_year=$(date +'%Y')

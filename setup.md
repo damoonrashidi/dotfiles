@@ -68,6 +68,7 @@ brew install erd
 brew install fzf
 brew install git-delta
 brew install starship
+brew install lazygit
 
 $(brew --prefix)/opt/fzf/install
 ```
@@ -77,3 +78,11 @@ cp .zshrc ~/.zshrc
 cp .fzf.zsh ~/.fzf.zsh
 cp .gitconfig ~/.gitconfig
 ```
+
+
+```sh
+ln -Fvs ~/labs/dotfiles/zed ~/.config
+ln -Fvs ~/labs/dotfiles/helix ~/.config
+ln -Fvs ~/labs/dotfiles/zellij ~/.config
+ln -Fvs ~/labs/dotfiles/starship.toml ~/.config
+ln -Fvs ~/labs/dotfiles/.zshrc ~/
