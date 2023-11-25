@@ -9,10 +9,6 @@ command = "efm-langserver"
 documentFormatting = true
 languages = { typescript = [ { formatCommand ="prettier --stdin-filepath ${INPUT}", formatStdin = true } ] }
 
-# [language-server.svelteserver]
-# command = "svelteserver"
-# args = ["--stdio"]
-
 [language-server.svelteserver.config.configuration.typescript]
 inlayHints.parameterTypes.enabled = true
 inlayHints.variableTypes.enabled = true
