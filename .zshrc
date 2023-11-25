@@ -6,7 +6,7 @@ export UPDATE_ZSH_DAYS=14
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git macos rust)
+plugins=(git macos rust gh npm yarn)
 
 # User configuration
 DEFAULT_USER="damoonrashidi"
