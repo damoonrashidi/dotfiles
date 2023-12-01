@@ -1,0 +1,32 @@
+layout borderless=true {
+    tab name="Brand" cwd="~/dev/wehype/brand/frontend/avalon" focus=true {
+        pane split_direction="horizontal" {
+            pane split_direction="vertical" {
+                pane name="avalon cmd" focus=true
+                pane command="npm" name="dev server" {
+                    args "run" "dev"
+                }
+            }
+            pane split_direction="vertical" {
+                pane name="ui cmd"
+                pane command="npm" name="storybook" {
+                    args "run" "storybook" "--" "--no-open"
+                }
+            }
+        }
+    }
+    tab name="ssh" cwd="~/Downloads" {
+        pane command="ssh" {
+            args "-i" "~/Downloads/SSHTunnel.pem" "ubuntu@ec2-54-93-195-255.eu-central-1.compute.amazonaws.com"             "-NL"  "27017:dev-document.caj6ihmewsmi.eu-central-1.docdb.amazonaws.com:27017"
+        }
+    }
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

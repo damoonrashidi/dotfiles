@@ -6,7 +6,7 @@ export UPDATE_ZSH_DAYS=14
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git macos rust gh npm yarn)
+plugins=(git macos rust gh npm yarn colorize)
 
 # User configuration
 DEFAULT_USER="damoonrashidi"
@@ -23,11 +23,9 @@ export PATH="/bin/zsh:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Users/damoonrashidi/.cargo/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="/opt/homebrew/bin/omnisharp:$PATH"
 export PATH="/opt/homebrew/bin/svelteserver:$PATH"
 export PATH="/opt/homebrew/bin/typescript-language-server:$PATH"
 export PATH="/opt/homebrew/bin/graphql-lsp:$PATH"
-export PATH="/opt/homebrew/bin/omnisharp:$PATH"
 
 # ============ ALIASES ============
 

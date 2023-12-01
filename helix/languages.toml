@@ -1,7 +1,3 @@
-[language-server.c-sharp]
-command = "dotnet"
-args = ["/opt/homebrew/bin/omnisharp", "--languageserver"]
-
 [language-server.efm-lsp-prettier]
 command = "efm-langserver"
 
