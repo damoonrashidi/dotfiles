@@ -1,5 +1,5 @@
 layout borderless=true {
-    tab name="Brand" cwd="~/dev/wehype/brand/frontend/avalon" focus=true {
+    tab cwd="~/dev/wehype/brand/frontend/avalon" name="Brand" focus=true {
         pane split_direction="horizontal" {
             pane split_direction="vertical" {
                 pane name="avalon cmd" focus=true

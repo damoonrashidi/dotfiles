@@ -26,6 +26,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/opt/homebrew/bin/svelteserver:$PATH"
 export PATH="/opt/homebrew/bin/typescript-language-server:$PATH"
 export PATH="/opt/homebrew/bin/graphql-lsp:$PATH"
+export PATH="~/.local/bin/:$PATH"
 
 # ============ ALIASES ============
 
@@ -45,6 +46,7 @@ alias chrome="open -a \"Google Chrome\""
 alias cat="bat"
 alias fs="du -sch"
 alias lg="lazygit"
+alias gd="lazygit"
 alias notes="zed ~/journal/"
 alias z="zellij"
 

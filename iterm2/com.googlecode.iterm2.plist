@@ -8,6 +8,8 @@
 	<true/>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
+	<key>Command</key>
+	<string></string>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Nord</key>

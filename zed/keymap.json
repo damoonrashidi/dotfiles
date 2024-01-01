@@ -4,13 +4,11 @@
     "bindings": {
       "cmd-r": "outline::Toggle",
       "cmd-shift-r": "project_symbols::Toggle",
-      "alt-ctrl-right": "editor::GoToHunk",
-      "alt-ctrl-left": "editor::GoToPrevHunk",
+      "alt-ctrl-up": "editor::GoToPrevHunk",
+      "alt-ctrl-down": "editor::GoToHunk",
       "f11": "editor::FindAllReferences",
       "cmd-[": "pane::GoBack",
       "cmd-]": "pane::GoForward",
-      "cmd-alt-i": "workspace::ToggleRightDock",
-      "cmd-shift-d": "editor::DuplicateLine",
       "cmd-shift-g": "editor::SelectAllMatches"
     }
   },
