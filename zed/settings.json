@@ -1,8 +1,9 @@
 {
-  "theme": "Rosé Pine Moon",
+  "theme": "Rosé Pine Dawn",
   "copilot": {
     "disabled_globs": [".env"]
   },
+  "ui_font_size": 15,
   "buffer_line_height": {
     "custom": 2.5
   },
