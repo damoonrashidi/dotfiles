@@ -1,17 +1,9 @@
 layout borderless=true {
     tab cwd="~/dev/wehype/brand/frontend/avalon" name="Brand" focus=true {
-        pane split_direction="horizontal" {
-            pane split_direction="vertical" {
-                pane name="avalon cmd" focus=true
-                pane command="npm" name="dev server" {
-                    args "run" "dev"
-                }
-            }
-            pane split_direction="vertical" {
-                pane name="ui cmd"
-                pane command="npm" name="storybook" {
-                    args "run" "storybook" "--" "--no-open"
-                }
+        pane split_direction="vertical" {
+            pane name="avalon cmd" focus=true
+            pane command="npm" name="dev server" {
+                args "run" "dev"
             }
         }
     }

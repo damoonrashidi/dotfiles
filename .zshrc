@@ -79,13 +79,13 @@ ask() {
     -d '{
       "model": "gpt-3.5-turbo-1106",
       "messages": [
-      {"role": "system", "content": "You are a helpful bash code snippet generator. You will be provided a description of the requested bash command and you should output the bash command and nothing else, no text no markdown and no backticks, just the bash command."},
+      {"role": "system", "content": "You are a helpful bash code snippet generator. You will be provided a description of the requested bash command and you should output the bash command and nothing else, your response should be a valid JSON string not an object. Just a string that is valid json, not surrounded by quotes."},
       {"role": "user", "content": "'${question}'"}]
     }' \
     "https://api.openai.com/v1/chat/completions")
 
   # Parse the zsh command from the API response
-  local zsh_command=$(echo "$api_response" | tr -d '`' | jq -r '.choices[0].message.content')
+  local zsh_command=$(echo "$api_response" | jq -r '.choices[0].message.content')
 
   # Return the zsh command
   echo "$zsh_command"
