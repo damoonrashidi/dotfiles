@@ -1,5 +1,5 @@
 {
-  "theme": "Rosé Pine Dawn",
+  "theme": "Rosé Pine Moon",
   "copilot": {
     "disabled_globs": [".env"]
   },
@@ -10,17 +10,14 @@
   "buffer_font_size": 12,
   "buffer_font_family": "Monaspace Krypton",
   "buffer_font_features": {
-    "calt": false,
+    "calt": true,
     "liga": false
   },
   "features": {
     "copilot": false
   },
-  "semantic_index": {
-    "enabled": true
-  },
   "assistant": {
-    "default_open_ai_model": "gpt-3.5-turbo-0613"
+    "default_open_ai_model": "gpt-4-1106-preview"
   },
   "inlay_hints": {
     "enabled": false

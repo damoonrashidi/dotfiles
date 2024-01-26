@@ -5,6 +5,11 @@ command = "efm-langserver"
 documentFormatting = true
 languages = { typescript = [ { formatCommand ="prettier --stdin-filepath ${INPUT}", formatStdin = true } ] }
 
+[language-server.marskman]
+documentFormatting = true
+command = "marksman"
+languages = { markdown = [ { formatCommand ="prettier --stdin-filepath ${INPUT}", formatStdin = true } ] }
+
 [language-server.svelteserver.config.configuration.typescript]
 inlayHints.parameterTypes.enabled = true
 inlayHints.variableTypes.enabled = true
@@ -24,6 +29,13 @@ inlayHints.parameterNames.enabled = "all"
 [[language]]
 name = "svelte"
 auto-format = true
+
+[[language]]
+name = "markdown"
+auto-format = true
+file-types = ["md", "mdx"]
+language-servers = ["marksman"]
+formatter = { command = "prettier", args = ["--stdin-filepath", "${INPUT}"]}
 
 [[language]]
 name = "typescript"

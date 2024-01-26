@@ -1,6 +1,6 @@
 layout borderless=true {
     tab cwd="~/dev/wehype/brand/frontend/avalon" name="Brand" focus=true {
-        pane split_direction="vertical" {
+        pane split_direction="horizontal" {
             pane name="avalon cmd" focus=true
             pane command="npm" name="dev server" {
                 args "run" "dev"

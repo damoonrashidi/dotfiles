@@ -6,7 +6,7 @@ export UPDATE_ZSH_DAYS=14
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git macos rust gh npm yarn colorize)
+plugins=(git macos rust gh npm yarn colorize zsh-autosuggestions)
 
 # User configuration
 DEFAULT_USER="damoonrashidi"
@@ -27,6 +27,9 @@ export PATH="/opt/homebrew/bin/svelteserver:$PATH"
 export PATH="/opt/homebrew/bin/typescript-language-server:$PATH"
 export PATH="/opt/homebrew/bin/graphql-lsp:$PATH"
 export PATH="~/.local/bin/:$PATH"
+export LIBRARY_PATH="/opt/homebrew/Cellar/sdl2/2.28.5/lib"
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib:/usr/local/lib"
+
 
 # ============ ALIASES ============
 
@@ -35,7 +38,7 @@ alias gph="gp -u origin HEAD"
 alias glogb="git log --graph --abbrev-commit --decorate --first-parent"
 alias gloga="glog --pretty=format:\"%h%x09%an%x09%ad%x09%s\""
 alias gcod="gco develop"
-alias gcom="gco master"
+alias gcom="gco main"
 alias grbd="grb -i develop"
 alias gmd="gm dev"
 alias gbdm="git branch --merged | grep -v "\*" | xargs git branch -d"
@@ -67,32 +70,9 @@ function csv() {
   column -s, -t < "$1" | less -#2 -N -S
 }
 
-ask() {
-  local question="$@"
-  # Read the OpenAI API token from the environment variable
-  local api_key="${OPENAPI_KEY:-}"
-
-  # Call the OpenAI API to get the equivalent zsh command
-  local api_response=$(curl -s -X POST \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $api_key" \
-    -d '{
-      "model": "gpt-3.5-turbo-1106",
-      "messages": [
-      {"role": "system", "content": "You are a helpful bash code snippet generator. You will be provided a description of the requested bash command and you should output the bash command and nothing else, your response should be a valid JSON string not an object. Just a string that is valid json, not surrounded by quotes."},
-      {"role": "user", "content": "'${question}'"}]
-    }' \
-    "https://api.openai.com/v1/chat/completions")
-
-  # Parse the zsh command from the API response
-  local zsh_command=$(echo "$api_response" | jq -r '.choices[0].message.content')
-
-  # Return the zsh command
-  echo "$zsh_command"
-}
-
-
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
 SPACESHIP_PROMPT_ASYNC=FALSE
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /Users/damoonrashidi/.config/broot/launcher/bash/br

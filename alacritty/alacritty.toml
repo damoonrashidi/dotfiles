@@ -1,0 +1,28 @@
+import = [
+    "~/.config/alacritty/rose-pine-moon.toml",
+]
+live_config_reload = true
+
+[window]
+decorations = "Full"
+opacity = 0.95
+blur = true
+option_as_alt = "Both"
+
+[shell]
+program = "/opt/homebrew/bin/zellij"
+# args = ["options", "--default-shell", "nu"]
+
+[font]
+normal = {family="Monaspace Krypton", style="Regular"}
+bold = {family="Monaspace Krypton", style="Bold"}
+italic = {family="Monaspace Krypton", style="Italic"}
+size = 11
+offset = {x = 0, y = 20}
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "Never" }
+unfocused_hollow = true
