@@ -209,7 +209,7 @@ simplified_ui true
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
-// default_shell "fish"
+default_shell "nu"
 
 // Choose the path to override cwd that zellij will use for opening new panes
 //
@@ -293,12 +293,12 @@ themes {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "rose-pine-moon"
+theme "rose-pine"
 
 // The name of the default layout to load on startup
 // Default: "default"
 //
-// default_layout "compact"
+default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal

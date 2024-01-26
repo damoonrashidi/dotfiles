@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/rose-pine-moon.toml",
+  "~/.config/alacritty/rose-pine.toml",
 ]
 live_config_reload = true
 
@@ -9,8 +9,8 @@ opacity = 0.95
 blur = true
 option_as_alt = "Both"
 
-[shell]
-program = "/opt/homebrew/bin/zellij"
+#[shell]
+#program = "/opt/homebrew/bin/zellij"
 # args = ["options", "--default-shell", "nu"]
 
 [font]
@@ -18,7 +18,7 @@ normal = {family="Monaspace Krypton", style="Regular"}
 bold = {family="Monaspace Krypton", style="Bold"}
 italic = {family="Monaspace Krypton", style="Italic"}
 size = 11
-offset = {x = 0, y = 20}
+offset = {x = 0, y = 25}
 
 [selection]
 save_to_clipboard = true
