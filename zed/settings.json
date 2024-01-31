@@ -1,13 +1,13 @@
 {
-  "theme": "Rosé Pine Moon",
+  "theme": "Rosé Pine Dawn",
   "copilot": {
     "disabled_globs": [".env"]
   },
-  "ui_font_size": 15,
+  "ui_font_size": 14,
   "buffer_line_height": {
     "custom": 2.5
   },
-  "buffer_font_size": 12,
+  "buffer_font_size": 11,
   "buffer_font_family": "Monaspace Krypton",
   "buffer_font_features": {
     "calt": true,
