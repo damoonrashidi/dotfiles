@@ -7,7 +7,7 @@ line-number="relative"
 auto-format = true
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
 select = "underline"
 

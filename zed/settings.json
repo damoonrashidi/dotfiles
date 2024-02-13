@@ -3,10 +3,14 @@
   "copilot": {
     "disabled_globs": [".env"]
   },
-  "ui_font_size": 14,
   "buffer_line_height": {
     "custom": 2.5
   },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "ui_font_size": 13,
   "buffer_font_size": 11,
   "buffer_font_family": "Monaspace Krypton",
   "buffer_font_features": {
@@ -25,6 +29,9 @@
   "vim_mode": false,
   "project_panel": {
     "dock": "left"
+  },
+  "deno": {
+    "enable": false
   },
   "language_overrides": {
     "JavaScript": {
