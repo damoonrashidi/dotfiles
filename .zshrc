@@ -76,3 +76,5 @@ SPACESHIP_PROMPT_ASYNC=FALSE
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source /Users/damoonrashidi/.config/broot/launcher/bash/br
+
+eval "$(atuin init zsh)"

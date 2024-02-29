@@ -32,3 +32,13 @@
 
 [oh-my-zsh]
 	hide-info = 1
+
+[branch]
+	sort = -committerdate
+
+[rerere]
+	enabled = true
+	autoUpdate = true
+
+[init]
+	defaultBranch = main
