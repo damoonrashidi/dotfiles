@@ -31,6 +31,13 @@ export LIBRARY_PATH="/opt/homebrew/Cellar/sdl2/2.28.5/lib"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib:/usr/local/lib"
 
 
+export DOTNET_ROOT=$HOME/dotnet/sdk
+export PATH=$PATH:$HOME/dotnet/runtime
+export PATH=$PATH:$HOME/dotnet/sdk
+export PATH=$PATH:$HOME/dotnet
+export DOTNET_ENVIRONMENT=Local
+export ASPNETCORE_ENVIRONMENT=Local
+
 # ============ ALIASES ============
 
 alias gstat="git status"

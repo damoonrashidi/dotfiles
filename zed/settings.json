@@ -1,14 +1,17 @@
 {
-  "theme": "Rosé Pine Dawn",
+  "theme": "Rosé Pine Moon",
   "copilot": {
     "disabled_globs": [".env"]
-  },
-  "buffer_line_height": {
-    "custom": 2.5
   },
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false
+  },
+  "gutter": {
+    "line_numbers": false
+  },
+  "buffer_line_height": {
+    "custom": 2.5
   },
   "ui_font_size": 13,
   "buffer_font_size": 11,
@@ -21,7 +24,8 @@
     "copilot": false
   },
   "assistant": {
-    "default_open_ai_model": "gpt-4-1106-preview"
+    "default_open_ai_model": "gpt-4-1106-preview",
+    "version": "1"
   },
   "inlay_hints": {
     "enabled": false
@@ -111,7 +115,8 @@
   "terminal": {
     "copy_on_select": true,
     "dock": "right",
-    "default_width": 200
+    "default_width": 200,
+    "line_height": "standard"
   },
   "lsp": {
     "rust-analyzer": {
@@ -122,6 +127,10 @@
       }
     },
     "eslint": {
+      "enabled": true,
+      "autoFixOnSave": true,
+      "autoFixOnFormat": true,
+      "autoFixOnFormatDelay": 200,
       "initialization_options": {
         "checkOnSave": {
           "command": "eslint"

@@ -3,12 +3,17 @@
     "context": "Editor",
     "bindings": {
       "cmd-r": "outline::Toggle",
-      "cmd-shift-r": "project_symbols::Toggle",
+      "cmd-shift-r": "workspace::ToggleRightDock",
+      "cmd-shift-d": "editor::DuplicateLineDown",
       "alt-ctrl-up": "editor::GoToPrevHunk",
       "alt-ctrl-down": "editor::GoToHunk",
       "f11": "editor::FindAllReferences",
       "cmd-[": "pane::GoBack",
       "cmd-]": "pane::GoForward",
+      "alt-up": "editor::SelectLargerSyntaxNode",
+      "alt-down": "editor::SelectSmallerSyntaxNode",
+      "cmd-ctrl-down": "editor::MoveLineDown",
+      "cmd-ctrl-up": "editor::MoveLineUp",
       "cmd-shift-g": "editor::SelectAllMatches"
     }
   },
