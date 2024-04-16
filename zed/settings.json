@@ -1,5 +1,5 @@
 {
-  "theme": "Rosé Pine Moon",
+  "theme": "Rosé Pine Dawn",
   "copilot": {
     "disabled_globs": [".env"]
   },
@@ -7,13 +7,17 @@
     "breadcrumbs": false,
     "quick_actions": false
   },
-  "gutter": {
-    "line_numbers": false
+  "tab_bar": {
+    "show_nav_history_buttons": false
   },
+  "gutter": {
+    "line_numbers": true,
+    "code_actions": false
+  },
+  "ui_font_size": 13,
   "buffer_line_height": {
     "custom": 2.5
   },
-  "ui_font_size": 13,
   "buffer_font_size": 11,
   "buffer_font_family": "Monaspace Neon",
   "buffer_font_features": {
@@ -30,49 +34,28 @@
   "inlay_hints": {
     "enabled": false
   },
-  "vim_mode": false,
   "project_panel": {
     "dock": "left"
   },
   "deno": {
     "enable": false
   },
+  "format_on_save": "on",
   "language_overrides": {
     "JavaScript": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
+      "formatter": "prettier"
     },
     "JSON": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
+      "formatter": "prettier"
     },
     "HTML": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
+      "formatter": "prettier"
     },
     "TypeScript": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
+      "formatter": "prettier"
     },
     "Svelte": {
       "formatter": "prettier",
-      "format_on_save": "on",
       "lsp": {
         "typescript-language-server": {
           "initialization_options": {
@@ -92,20 +75,10 @@
       }
     },
     "CSS": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
+      "formatter": "prettier"
     },
     "TSX": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
+      "formatter": "prettier"
     }
   },
   "journal": {
