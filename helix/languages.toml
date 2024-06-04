@@ -10,6 +10,20 @@ documentFormatting = true
 command = "marksman"
 languages = { markdown = [ { formatCommand ="prettier --stdin-filepath ${INPUT}", formatStdin = true } ] }
 
+[[language]]
+name = "svelte"
+auto-format = true
+
+[[language]]
+name = "c-sharp"
+scope = "source.cs"
+injection-regex = "c-?sharp"
+roots = ["sln", "csproj"]
+file-types = ["cs"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "    " }
+
+
 [language-server.svelteserver.config.configuration.typescript]
 inlayHints.parameterTypes.enabled = true
 inlayHints.variableTypes.enabled = true
@@ -25,10 +39,6 @@ inlayHints.propertyDeclarationTypes.enabled = true
 inlayHints.functionLikeReturnTypes.enabled = true
 inlayHints.enumMemberValues.enabled = true
 inlayHints.parameterNames.enabled = "all"
-
-[[language]]
-name = "svelte"
-auto-format = true
 
 [[language]]
 name = "markdown"
@@ -51,4 +61,9 @@ args = ["lsp"]
 environment = { NO_COLOR = "1" }
 
 [language-server.deno-lsp.config.deno]
-enable = true
+enable = false
+
+[language-server.omnisharp]
+command = "dotnet"
+args = ["/Users/damoonrashidi/.dotnet/omnisharp/OmniSharp.dll", "--lsp", "--stdio"]
+

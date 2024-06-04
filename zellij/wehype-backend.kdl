@@ -1,0 +1,35 @@
+layout {
+    tab name="api" cwd="~/dev/wehype/Backend" focus="true" {
+        pane split_direction="horizontal" {
+            pane command="dotnet" focus=true name="Brand API" {
+                args "run" "--project" "./Brand/Brand.Api/Brand.Api.csproj" "-c" "Local"
+            }
+            pane command="dotnet" name="Programs API" {
+                args "run" "--project" "./Programs/Programs.Api/Programs.Api.csproj" "-c" "Local"
+            }
+        }
+        pane split_direction="vertical" {
+            pane command="dotnet" name="Core API" {
+                args "run" "--project" "./Business/CoreApi/CoreApi.csproj" "-c" "Local"
+            }
+            pane command="dotnet" name="WebAPI Core" {
+                args "run" "--project" "./Business/WebApiCore/WebApiCore.csproj" "-c" "Local"
+            }
+            pane command="dotnet" name="Games API" {
+                args "run" "--project" "./Games/Games.Api/GAmes.Api.csproj" "-c" "Local"
+            }
+        }
+    }
+    tab name="sh" cwd="~/dev/wehype/" {
+        pane name="term"
+    }
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

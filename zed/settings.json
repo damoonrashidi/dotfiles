@@ -1,7 +1,21 @@
 {
-  "theme": "Rosé Pine Dawn",
-  "copilot": {
-    "disabled_globs": [".env"]
+  "theme": "Rosé Pine Moon",
+  // "experimental.theme_overrides": {
+  //   "players": [
+  //     {
+  //       "selection": "#37447599"
+  //     }
+  //   ]
+  // },
+  "indent_guides": {
+    "enabled": false
+  },
+  "when_closing_with_no_tabs": "keep_window_open",
+  "task": {
+    "show_status_indicator": false
+  },
+  "preview_tabs": {
+    "enabled": false
   },
   "toolbar": {
     "breadcrumbs": false,
@@ -19,7 +33,7 @@
     "custom": 2.5
   },
   "buffer_font_size": 11,
-  "buffer_font_family": "Monaspace Neon",
+  "buffer_font_family": "Monaspace Krypton",
   "buffer_font_features": {
     "calt": false,
     "liga": false
@@ -28,7 +42,6 @@
     "copilot": false
   },
   "assistant": {
-    "default_open_ai_model": "gpt-4-1106-preview",
     "version": "1"
   },
   "inlay_hints": {
@@ -41,46 +54,7 @@
     "enable": false
   },
   "format_on_save": "on",
-  "language_overrides": {
-    "JavaScript": {
-      "formatter": "prettier"
-    },
-    "JSON": {
-      "formatter": "prettier"
-    },
-    "HTML": {
-      "formatter": "prettier"
-    },
-    "TypeScript": {
-      "formatter": "prettier"
-    },
-    "Svelte": {
-      "formatter": "prettier",
-      "lsp": {
-        "typescript-language-server": {
-          "initialization_options": {
-            "preferences": {
-              "includeInlayParameterNameHints": "all",
-              "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
-              "includeInlayFunctionParameterTypeHints": true,
-              "includeInlayVariableTypeHints": true,
-              "includeInlayVariableTypeHintsWhenTypeMatchesName": false,
-              "includeInlayPropertyDeclarationTypeHints": true,
-              "includeInlayFunctionLikeReturnTypeHints": true,
-              "includeInlayEnumMemberValueHints": true,
-              "includeInlayEnumMemberDeclarationTypes": true
-            }
-          }
-        }
-      }
-    },
-    "CSS": {
-      "formatter": "prettier"
-    },
-    "TSX": {
-      "formatter": "prettier"
-    }
-  },
+  "formatter": "language_server",
   "journal": {
     "path": "~",
     "hour_format": "hour24"
@@ -90,6 +64,20 @@
     "dock": "right",
     "default_width": 200,
     "line_height": "standard"
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "language_overrides": {
+    "TypeScript": {
+      "formatter": "prettier"
+    },
+    "Svelte": {
+      "formatter": "prettier"
+    }
   },
   "lsp": {
     "rust-analyzer": {
@@ -119,7 +107,12 @@
         "markdown",
         "svelte"
       ],
-      "validate": ["javascript", "typescript", "javascriptreact", "svelte"]
+      "validate": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "svelte"
+      ]
     }
   }
 }

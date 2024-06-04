@@ -22,6 +22,7 @@
     "bindings": {
       "cmd-.": "project_panel::NewFile",
       "cmd-,": "project_panel::NewDirectory",
+      "f2": "project_panel::Rename",
       "cmd-shift-c": "project_panel::CopyPath",
       "enter": "project_panel::Open"
     }

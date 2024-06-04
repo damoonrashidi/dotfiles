@@ -14,6 +14,7 @@ DEFAULT_USER="damoonrashidi"
 source $ZSH/oh-my-zsh.sh
 source ~/.secretrc
 source ~/.workrc
+source ~/.dieselrc
 
 # ============ PATHS ============
 
@@ -27,16 +28,12 @@ export PATH="/opt/homebrew/bin/svelteserver:$PATH"
 export PATH="/opt/homebrew/bin/typescript-language-server:$PATH"
 export PATH="/opt/homebrew/bin/graphql-lsp:$PATH"
 export PATH="~/.local/bin/:$PATH"
-export LIBRARY_PATH="/opt/homebrew/Cellar/sdl2/2.28.5/lib"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib:/usr/local/lib"
 
-
-export DOTNET_ROOT=$HOME/dotnet/sdk
-export PATH=$PATH:$HOME/dotnet/runtime
-export PATH=$PATH:$HOME/dotnet/sdk
-export PATH=$PATH:$HOME/dotnet
-export DOTNET_ENVIRONMENT=Local
-export ASPNETCORE_ENVIRONMENT=Local
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+export PQ_LIB_DIR="$(brew --prefix libpq)/lib"
 
 # ============ ALIASES ============
 

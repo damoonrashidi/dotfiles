@@ -6,13 +6,16 @@ decorations = "Full"
 opacity = 0.95
 blur = true
 option_as_alt = "Both"
+dynamic_title = true
+decorations_theme_variant = "Dark"
+resize_increments = true
 
 [font]
 normal = { family = "Monaspace Krypton", style = "Regular" }
 bold = { family = "Monaspace Krypton", style = "Bold" }
 italic = { family = "Monaspace Krypton", style = "Italic" }
 size = 12
-offset = { x = 0, y = 15 }
+# offset = { x = 0, y = 15 }
 
 [selection]
 save_to_clipboard = true
