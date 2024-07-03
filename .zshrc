@@ -6,7 +6,7 @@ export UPDATE_ZSH_DAYS=14
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git macos rust gh npm yarn colorize zsh-autosuggestions)
+plugins=(git macos rust gh npm yarn colorize zsh-autosuggestions aws gcloud)
 
 # User configuration
 DEFAULT_USER="damoonrashidi"
@@ -37,7 +37,7 @@ export PQ_LIB_DIR="$(brew --prefix libpq)/lib"
 
 # ============ ALIASES ============
 
-alias gstat="git status"
+alias gstat="git status --short --branch"
 alias gph="gp -u origin HEAD"
 alias glogb="git log --graph --abbrev-commit --decorate --first-parent"
 alias gloga="glog --pretty=format:\"%h%x09%an%x09%ad%x09%s\""

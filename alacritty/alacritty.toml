@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/rose-pine-moon.toml"]
+import = ["~/.config/alacritty/rose-pine.toml"]
 live_config_reload = true
 
 [window]
@@ -15,7 +15,7 @@ normal = { family = "Monaspace Krypton", style = "Regular" }
 bold = { family = "Monaspace Krypton", style = "Bold" }
 italic = { family = "Monaspace Krypton", style = "Italic" }
 size = 12
-# offset = { x = 0, y = 15 }
+offset = { x = 0, y = 15 }
 
 [selection]
 save_to_clipboard = true

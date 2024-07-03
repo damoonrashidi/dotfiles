@@ -1,12 +1,5 @@
 {
   "theme": "Rosé Pine Moon",
-  // "experimental.theme_overrides": {
-  //   "players": [
-  //     {
-  //       "selection": "#37447599"
-  //     }
-  //   ]
-  // },
   "indent_guides": {
     "enabled": false
   },
@@ -22,6 +15,7 @@
     "quick_actions": false
   },
   "tab_bar": {
+    "show": true,
     "show_nav_history_buttons": false
   },
   "gutter": {
@@ -38,10 +32,10 @@
     "calt": false,
     "liga": false
   },
-  "features": {
-    "copilot": false
-  },
   "assistant": {
+    "provider": {
+      "name": "openai"
+    },
     "version": "1"
   },
   "inlay_hints": {
@@ -63,7 +57,9 @@
     "copy_on_select": true,
     "dock": "right",
     "default_width": 200,
-    "line_height": "standard"
+    "line_height": {
+      "custom": 1.0
+    }
   },
   "chat_panel": {
     "button": false
@@ -71,12 +67,42 @@
   "notification_panel": {
     "button": false
   },
-  "language_overrides": {
-    "TypeScript": {
+  "languages": {
+    "GraphQL": {
       "formatter": "prettier"
     },
     "Svelte": {
       "formatter": "prettier"
+    },
+    "TypeScript": {
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": true
+      },
+      // "language_servers": [
+      //   "deno",
+      // ],
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
+    "TSX": {
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": true
+      },
+      "language_servers": ["deno", "tailwindcss-language-server"],
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
     }
   },
   "lsp": {
@@ -107,12 +133,7 @@
         "markdown",
         "svelte"
       ],
-      "validate": [
-        "javascript",
-        "typescript",
-        "javascriptreact",
-        "svelte"
-      ]
+      "validate": ["javascript", "typescript", "javascriptreact", "svelte"]
     }
   }
 }

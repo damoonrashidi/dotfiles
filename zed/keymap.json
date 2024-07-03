@@ -1,9 +1,12 @@
 [
   {
+    "bindings": {
+      "cmd-r": "outline::Toggle"
+    }
+  },
+  {
     "context": "Editor",
     "bindings": {
-      "cmd-r": "outline::Toggle",
-      "cmd-shift-r": "workspace::ToggleRightDock",
       "cmd-shift-d": "editor::DuplicateLineDown",
       "alt-ctrl-up": "editor::GoToPrevHunk",
       "alt-ctrl-down": "editor::GoToHunk",

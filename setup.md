@@ -58,7 +58,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 brew install --cask google-chrome
 brew install --cask slack
 brew install --cask docker
-brew install --cask warp
 brew install --cask alfred
 brew install --cask bettertouchtool
 brew install --cask rectangle
@@ -69,6 +68,8 @@ brew install fzf
 brew install git-delta
 brew install starship
 brew install lazygit
+brew install zellij
+brew install alacritty
 
 $(brew --prefix)/opt/fzf/install
 ```
@@ -79,10 +80,10 @@ cp .fzf.zsh ~/.fzf.zsh
 cp .gitconfig ~/.gitconfig
 ```
 
-
 ```sh
 ln -Fvs ~/labs/dotfiles/zed ~/.config
 ln -Fvs ~/labs/dotfiles/helix ~/.config
 ln -Fvs ~/labs/dotfiles/zellij ~/.config
 ln -Fvs ~/labs/dotfiles/starship.toml ~/.config
 ln -Fvs ~/labs/dotfiles/.zshrc ~/
+```
