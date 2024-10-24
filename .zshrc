@@ -56,6 +56,7 @@ alias lg="lazygit"
 alias gd="lazygit"
 alias notes="zed ~/journal/"
 alias z="zellij"
+alias kbry="sudo shutdown -h +0"
 
 function note() {
     current_year=$(date +'%Y')
@@ -82,3 +83,10 @@ SPACESHIP_PROMPT_ASYNC=FALSE
 source /Users/damoonrashidi/.config/broot/launcher/bash/br
 
 eval "$(atuin init zsh)"
+
+# bun completions
+[ -s "/Users/damoonrashidi/.bun/_bun" ] && source "/Users/damoonrashidi/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

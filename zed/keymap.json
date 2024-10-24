@@ -1,15 +1,11 @@
 [
   {
-    "bindings": {
-      "cmd-r": "outline::Toggle"
-    }
-  },
-  {
     "context": "Editor",
     "bindings": {
       "cmd-shift-d": "editor::DuplicateLineDown",
       "alt-ctrl-up": "editor::GoToPrevHunk",
       "alt-ctrl-down": "editor::GoToHunk",
+      "cmd-r": "outline::Toggle",
       "f11": "editor::FindAllReferences",
       "cmd-[": "pane::GoBack",
       "cmd-]": "pane::GoForward",
@@ -28,6 +24,13 @@
       "f2": "project_panel::Rename",
       "cmd-shift-c": "project_panel::CopyPath",
       "enter": "project_panel::Open"
+    }
+  },
+  {
+    "context": "OutlinePanel",
+    "bindings": {
+      "cmd-p": "outline_panel::ToggleActiveEditorPin",
+      "alt-up": "outline_panel::SelectParent"
     }
   }
 ]

@@ -7,6 +7,9 @@ layout {
             pane command="dotnet" name="Programs API" {
                 args "run" "--project" "./Programs/Programs.Api/Programs.Api.csproj" "-c" "Local"
             }
+            pane command="dotnet" name="Game Reach API" {
+                args "run" "--project" "./Analytics/GameReach/Analytics.GameReach.Api/Analytics.GameReach.Api.csproj" "-c" "Local"
+            }
         }
         pane split_direction="vertical" {
             pane command="dotnet" name="Core API" {

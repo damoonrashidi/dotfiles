@@ -1,4 +1,10 @@
 {
+  "vim_mode": false,
+  "language_models": {
+    "openai": {
+      "version": "1"
+    }
+  },
   "theme": "Rosé Pine Moon",
   "indent_guides": {
     "enabled": false
@@ -7,8 +13,15 @@
   "task": {
     "show_status_indicator": false
   },
+  "collaboration_panel": {
+    "dock": "right"
+  },
   "preview_tabs": {
     "enabled": false
+  },
+  "outline_panel": {
+    "button": false,
+    "dock": "right"
   },
   "toolbar": {
     "breadcrumbs": false,
@@ -19,10 +32,10 @@
     "show_nav_history_buttons": false
   },
   "gutter": {
-    "line_numbers": true,
+    "line_numbers": false,
     "code_actions": false
   },
-  "ui_font_size": 13,
+  "ui_font_size": 11,
   "buffer_line_height": {
     "custom": 2.5
   },
@@ -33,22 +46,26 @@
     "liga": false
   },
   "assistant": {
-    "provider": {
-      "name": "openai"
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-20240620"
     },
-    "version": "1"
+    "provider": null,
+    "version": "2"
   },
   "inlay_hints": {
     "enabled": false
   },
   "project_panel": {
-    "dock": "left"
-  },
-  "deno": {
-    "enable": false
+    "dock": "left",
+    "auto_fold_dirs": false
   },
   "format_on_save": "on",
-  "formatter": "language_server",
+  "formatter": {
+    "language_server": {
+      "name": "prettier"
+    }
+  },
   "journal": {
     "path": "~",
     "hour_format": "hour24"
@@ -71,8 +88,15 @@
     "GraphQL": {
       "formatter": "prettier"
     },
-    "Svelte": {
+    "Markdown": {
       "formatter": "prettier"
+    },
+    "Svelte": {
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": true
+      }
     },
     "TypeScript": {
       "formatter": "prettier",
@@ -80,30 +104,35 @@
         "source.fixAll": true,
         "source.fixAll.eslint": true
       },
-      // "language_servers": [
-      //   "deno",
-      // ],
       "format_on_save": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
         }
       }
     },
     "TSX": {
-      "formatter": "prettier",
       "code_actions_on_format": {
         "source.fixAll": true,
         "source.fixAll.eslint": true
       },
-      "language_servers": ["deno", "tailwindcss-language-server"],
       "format_on_save": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
         }
       }
     }
+  },
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports.eslint": true
   },
   "lsp": {
     "rust-analyzer": {
@@ -111,6 +140,12 @@
         "checkOnSave": {
           "command": "clippy"
         }
+      }
+    },
+    "biome": {
+      "settings": {
+        "enabled": false,
+        "require_config_file": true
       }
     },
     "eslint": {
@@ -129,11 +164,14 @@
         "typescript",
         "typescriptreact",
         "html",
-        "vue",
-        "markdown",
         "svelte"
       ],
-      "validate": ["javascript", "typescript", "javascriptreact", "svelte"]
+      "validate": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "svelte"
+      ]
     }
   }
 }
