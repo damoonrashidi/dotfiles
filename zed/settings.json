@@ -1,4 +1,8 @@
 {
+  "show_inline_completions": false,
+  "features": {
+    "inline_completion_provider": "copilot"
+  },
   "vim_mode": false,
   "language_models": {
     "openai": {
@@ -36,20 +40,21 @@
     "code_actions": false
   },
   "ui_font_size": 11,
+  "buffer_font_size": 11,
   "buffer_line_height": {
     "custom": 2.5
   },
-  "buffer_font_size": 11,
   "buffer_font_family": "Monaspace Krypton",
   "buffer_font_features": {
-    "calt": false,
-    "liga": false
+    "calt": true,
+    "liga": true
   },
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest"
     },
+    "enable_experimental_live_diffs": true,
     "provider": null,
     "version": "2"
   },
@@ -58,7 +63,12 @@
   },
   "project_panel": {
     "dock": "left",
-    "auto_fold_dirs": false
+    "auto_fold_dirs": false,
+    "indent_guides": {
+      "show": "never"
+    },
+    "indent_size": 15,
+    "button": false
   },
   "format_on_save": "on",
   "formatter": {
@@ -86,6 +96,9 @@
   },
   "languages": {
     "GraphQL": {
+      "formatter": "prettier"
+    },
+    "JSON": {
       "formatter": "prettier"
     },
     "Markdown": {
@@ -130,6 +143,9 @@
       }
     }
   },
+  "file_scan_inclusions": [
+    ".env",
+  ],
   "code_actions_on_format": {
     "source.fixAll.eslint": true,
     "source.organizeImports.eslint": true

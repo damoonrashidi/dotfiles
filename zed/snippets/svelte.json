@@ -1,0 +1,17 @@
+{
+  "New component": {
+    "prefix": "@component",
+    "body": [
+      "<script lang=\"ts\">",
+      "$1",
+      "</script>",
+      "",
+      "$0",
+      "",
+      "<style lang=\"scss\">",
+      "",
+      "</style>"
+    ],
+    "description": "Create a new svelte component"
+  }
+}

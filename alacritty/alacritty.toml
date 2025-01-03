@@ -1,5 +1,3 @@
-import = ["~/.config/alacritty/rose-pine.toml"]
-live_config_reload = true
 
 [window]
 decorations = "Full"
@@ -23,3 +21,7 @@ save_to_clipboard = true
 [cursor]
 style = { shape = "Block", blinking = "Never" }
 unfocused_hollow = true
+
+[general]
+live_config_reload = true
+import = ["~/.config/alacritty/rose-pine.toml"]

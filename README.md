@@ -62,6 +62,7 @@ brew install --cask alfred
 brew install --cask bettertouchtool
 brew install --cask rectangle
 brew install --cask sublime-merge
+brew install --cask ghostty
 brew install httpie
 brew install erd
 brew install fzf
@@ -85,5 +86,6 @@ ln -Fvs ~/labs/dotfiles/zed ~/.config
 ln -Fvs ~/labs/dotfiles/helix ~/.config
 ln -Fvs ~/labs/dotfiles/zellij ~/.config
 ln -Fvs ~/labs/dotfiles/starship.toml ~/.config
+ln -Fvs ~/labs/dotfiles/ghostty ~/.config
 ln -Fvs ~/labs/dotfiles/.zshrc ~/
 ```

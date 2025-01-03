@@ -25,3 +25,4 @@ left = ["mode", "file-name", "version-control"]
 
 [keys.normal]
 minus = "file_picker_in_current_buffer_directory"
+X = "extend_line_up"
