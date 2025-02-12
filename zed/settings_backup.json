@@ -1,7 +1,7 @@
 {
-  "show_edit_predictions": true,
+  "show_inline_completions": true,
   "features": {
-    "edit_prediction_provider": "zed"
+    "inline_completion_provider": "zed"
   },
   "vim_mode": false,
   "language_models": {
