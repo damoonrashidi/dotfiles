@@ -44,7 +44,7 @@
     "code_actions": false
   },
   "ui_font_size": 11,
-  "buffer_font_size": 11,
+  "buffer_font_size": 11.0,
   "buffer_line_height": {
     "custom": 2.5
   },
