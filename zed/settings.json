@@ -1,7 +1,7 @@
 {
-  "show_edit_predictions": true,
+  "show_edit_predictions": false,
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "vim_mode": false,
   "language_models": {
@@ -10,9 +10,9 @@
     }
   },
   "theme": {
-    "mode": "system",
     "dark": "Rosé Pine Moon",
-    "light": "Rosé Pine Moon"
+    "light": "Rosé Pine Dawn",
+    "mode": "dark"
   },
   "indent_guides": {
     "enabled": false
@@ -44,7 +44,7 @@
     "code_actions": false
   },
   "ui_font_size": 11,
-  "buffer_font_size": 11.0,
+  "buffer_font_size": 11,
   "buffer_line_height": {
     "custom": 2.5
   },
@@ -58,9 +58,8 @@
       "provider": "zed.dev",
       "model": "claude-3-5-sonnet-latest"
     },
-    "enabled": true,
     "enable_experimental_live_diffs": true,
-    "dock": "right",
+    "provider": null,
     "version": "2"
   },
   "inlay_hints": {
@@ -94,7 +93,7 @@
     }
   },
   "chat_panel": {
-    "button": "when_in_call"
+    "button": false
   },
   "notification_panel": {
     "button": false
@@ -149,7 +148,7 @@
     }
   },
   "file_scan_inclusions": [
-    ".env"
+    ".env",
   ],
   "code_actions_on_format": {
     "source.fixAll.eslint": true,

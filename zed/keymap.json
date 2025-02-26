@@ -6,7 +6,9 @@
       "alt-ctrl-up": "editor::GoToPrevHunk",
       "alt-ctrl-down": "editor::GoToHunk",
       "cmd-r": "outline::Toggle",
+      "f10": "editor::GoToTypeDefinition",
       "f11": "editor::FindAllReferences",
+      "f12": "editor::GoToDefinition",
       "cmd-[": "pane::GoBack",
       "cmd-]": "pane::GoForward",
       "alt-up": "editor::SelectLargerSyntaxNode",
@@ -22,7 +24,7 @@
       "cmd-.": "project_panel::NewFile",
       "cmd-,": "project_panel::NewDirectory",
       "f2": "project_panel::Rename",
-      "cmd-shift-c": "project_panel::CopyPath",
+      "cmd-shift-c": "workspace::CopyPath",
       "enter": "project_panel::Open"
     }
   },

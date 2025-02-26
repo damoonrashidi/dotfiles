@@ -1,7 +1,7 @@
 {
-  "show_inline_completions": true,
+  "show_inline_completions": false,
   "features": {
-    "inline_completion_provider": "zed"
+    "inline_completion_provider": "copilot"
   },
   "vim_mode": false,
   "language_models": {
@@ -9,11 +9,7 @@
       "version": "1"
     }
   },
-  "theme": {
-    "mode": "system",
-    "dark": "Rosé Pine Moon",
-    "light": "Rosé Pine Moon"
-  },
+  "theme": "Rosé Pine Moon",
   "indent_guides": {
     "enabled": false
   },
@@ -58,9 +54,8 @@
       "provider": "zed.dev",
       "model": "claude-3-5-sonnet-latest"
     },
-    "enabled": true,
     "enable_experimental_live_diffs": true,
-    "dock": "right",
+    "provider": null,
     "version": "2"
   },
   "inlay_hints": {
@@ -94,7 +89,7 @@
     }
   },
   "chat_panel": {
-    "button": "when_in_call"
+    "button": false
   },
   "notification_panel": {
     "button": false
@@ -149,7 +144,7 @@
     }
   },
   "file_scan_inclusions": [
-    ".env"
+    ".env",
   ],
   "code_actions_on_format": {
     "source.fixAll.eslint": true,
