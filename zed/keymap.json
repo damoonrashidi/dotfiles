@@ -3,7 +3,7 @@
     "context": "Editor",
     "bindings": {
       "cmd-shift-d": "editor::DuplicateLineDown",
-      "alt-ctrl-up": "editor::GoToPrevHunk",
+      "alt-ctrl-up": "editor::GoToPreviousHunk",
       "alt-ctrl-down": "editor::GoToHunk",
       "cmd-r": "outline::Toggle",
       "f10": "editor::GoToTypeDefinition",

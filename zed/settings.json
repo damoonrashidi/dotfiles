@@ -3,6 +3,11 @@
   "features": {
     "edit_prediction_provider": "copilot"
   },
+  "git_panel": {
+    "dock": "right",
+    "default_width": 200,
+    "button": false
+  },
   "vim_mode": false,
   "language_models": {
     "openai": {
