@@ -1,6 +1,7 @@
 font-family = "Monaspace Krypton"
 font-size = 11
 cursor-style = block
+copy-on-select = clipboard
 
 # adjust-cell-height = 50%
 
