@@ -3,6 +3,10 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
+  "edit_predictions": {
+    "mode": "eager",
+    "enabled_in_assistant": true,
+  },
   "git_panel": {
     "dock": "right",
     "default_width": 200,
@@ -27,7 +31,8 @@
     "show_status_indicator": false
   },
   "collaboration_panel": {
-    "dock": "right"
+    "dock": "right",
+    "button": false
   },
   "preview_tabs": {
     "enabled": false
@@ -65,7 +70,8 @@
     },
     "enable_experimental_live_diffs": true,
     "provider": null,
-    "version": "2"
+    "version": "2",
+    "button": false
   },
   "inlay_hints": {
     "enabled": false
@@ -92,13 +98,16 @@
   "terminal": {
     "copy_on_select": true,
     "dock": "right",
+    "button": false,
     "default_width": 200,
     "line_height": {
       "custom": 1.0
     }
   },
   "chat_panel": {
-    "button": false
+    "dock": "right",
+    "button": "when_in_call",
+    "default_width": 200
   },
   "notification_panel": {
     "button": false
