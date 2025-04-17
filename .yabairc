@@ -1,0 +1,6 @@
+yabai -m config layout bsp
+
+yabai -m config window_gap 8
+
+yabai -m rule --add app="^System$" manage=off
+yabai -m rule --add app="^System Preferences$" float=on

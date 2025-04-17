@@ -1,0 +1,23 @@
+{
+  "Console Log": {
+    "prefix": "clog",
+    "body": [
+      "console.log($0);"
+    ],
+    "description": "Log a value"
+  },
+  "React Component": {
+    "prefix": "component",
+    "body": [
+      "export const ${1:ComponentName} = () => {",
+      "  return (",
+      "    ${2:<div>",
+      "      Component content",
+      "    </div>}",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "Create a React component"
+  }
+}

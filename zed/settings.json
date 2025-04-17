@@ -1,12 +1,14 @@
 {
+  "bottom_dock_layout": "contained",
   "show_edit_predictions": true,
   "features": {
     "edit_prediction_provider": "zed"
   },
   "edit_predictions": {
-    "mode": "eager",
-    "enabled_in_assistant": true,
+    "mode": "subtle",
+    "enabled_in_assistant": true
   },
+  "show_wrap_guides": false,
   "git_panel": {
     "dock": "right",
     "default_width": 200,
@@ -20,8 +22,8 @@
   },
   "theme": {
     "dark": "Rosé Pine Moon",
-    "light": "Rosé Pine Dawn",
-    "mode": "dark"
+    "light": "Rosé Pine Moon",
+    "mode": "system"
   },
   "indent_guides": {
     "enabled": false
@@ -53,7 +55,7 @@
     "line_numbers": false,
     "code_actions": false
   },
-  "ui_font_size": 11,
+  "ui_font_size": 13,
   "buffer_font_size": 11,
   "buffer_line_height": {
     "custom": 2.5
@@ -66,7 +68,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "enable_experimental_live_diffs": true,
     "provider": null,
@@ -114,13 +116,16 @@
   },
   "languages": {
     "GraphQL": {
-      "formatter": "prettier"
+      "formatter": "prettier",
+      "format_on_save": "prettier"
     },
     "JSON": {
-      "formatter": "prettier"
+      "formatter": "prettier",
+      "format_on_save": "prettier"
     },
     "Markdown": {
-      "formatter": "prettier"
+      "formatter": "prettier",
+      "format_on_save": "prettier"
     },
     "Svelte": {
       "formatter": "prettier",
@@ -135,34 +140,32 @@
         "source.fixAll": true,
         "source.fixAll.eslint": true
       },
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": [
-            "--stdin-filepath",
-            "{buffer_path}"
-          ]
-        }
-      }
+      "format_on_save": "prettier"
     },
     "TSX": {
       "code_actions_on_format": {
         "source.fixAll": true,
         "source.fixAll.eslint": true
       },
+      "format_on_save": "prettier"
+    },
+    "PHP": {
+      "formatter": "language_server",
       "format_on_save": {
         "external": {
-          "command": "prettier",
+          "command": "bash",
           "arguments": [
-            "--stdin-filepath",
-            "{buffer_path}"
+            "-c",
+            "temp=$(mktemp) && cat > $temp && ./vendor/bin/pint --quiet $temp && cat $temp"
           ]
         }
       }
-    }
+    },
   },
   "file_scan_inclusions": [
     ".env",
+    "laravel.log",
+    "query.log"
   ],
   "code_actions_on_format": {
     "source.fixAll.eslint": true,
