@@ -27,7 +27,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/opt/homebrew/bin/svelteserver:$PATH"
 export PATH="/opt/homebrew/bin/typescript-language-server:$PATH"
 export PATH="/opt/homebrew/bin/graphql-lsp:$PATH"
-export PATH="~/.local/bin/:$PATH"
+export PATH="/Users/damoonrashidi/.local/bin/:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib:/usr/local/lib"
 

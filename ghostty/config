@@ -15,4 +15,8 @@ palette = 12=#9ccfd8
 
 selection-background = #44415a
 
-keybind = super+k=clear_screen
+confirm-close-surface = false
+custom-shader = ./bloom.glsl
+custom-shader = ./retro.glsl
+# custom-shader = ./dither.glsl
+custom-shader = ./bettercrt.glsl

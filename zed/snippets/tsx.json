@@ -9,9 +9,12 @@
   "React Component": {
     "prefix": "component",
     "body": [
-      "export const ${1:ComponentName} = () => {",
+      "interface ${1:}Props {",
+      "  ${2}: ${3}",
+      "}",
+      "export const ${1:ComponentName} = ({${2}}: ${1:}Props) => {",
       "  return (",
-      "    ${2:<div>",
+      "    ${4:<div>",
       "      Component content",
       "    </div>}",
       "  );",

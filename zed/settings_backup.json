@@ -1,7 +1,18 @@
 {
-  "show_inline_completions": false,
+  "bottom_dock_layout": "contained",
+  "show_edit_predictions": true,
   "features": {
-    "inline_completion_provider": "copilot"
+    "edit_prediction_provider": "zed"
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "enabled_in_assistant": true
+  },
+  "show_wrap_guides": false,
+  "git_panel": {
+    "dock": "right",
+    "default_width": 200,
+    "button": false
   },
   "vim_mode": false,
   "language_models": {
@@ -9,7 +20,11 @@
       "version": "1"
     }
   },
-  "theme": "Rosé Pine Moon",
+  "theme": {
+    "dark": "Rosé Pine Moon",
+    "light": "Rosé Pine Dawn",
+    "mode": "system"
+  },
   "indent_guides": {
     "enabled": false
   },
@@ -18,7 +33,8 @@
     "show_status_indicator": false
   },
   "collaboration_panel": {
-    "dock": "right"
+    "dock": "right",
+    "button": false
   },
   "preview_tabs": {
     "enabled": false
@@ -39,7 +55,7 @@
     "line_numbers": false,
     "code_actions": false
   },
-  "ui_font_size": 11,
+  "ui_font_size": 16,
   "buffer_font_size": 11,
   "buffer_line_height": {
     "custom": 2.5
@@ -50,13 +66,16 @@
     "liga": true
   },
   "assistant": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "enable_experimental_live_diffs": true,
     "provider": null,
-    "version": "2"
+    "version": "2",
+    "button": false
   },
   "inlay_hints": {
     "enabled": false
@@ -82,27 +101,33 @@
   },
   "terminal": {
     "copy_on_select": true,
-    "dock": "right",
+    "dock": "bottom",
+    "button": false,
     "default_width": 200,
     "line_height": {
       "custom": 1.0
     }
   },
   "chat_panel": {
-    "button": false
+    "dock": "right",
+    "button": "when_in_call",
+    "default_width": 200
   },
   "notification_panel": {
     "button": false
   },
   "languages": {
     "GraphQL": {
-      "formatter": "prettier"
+      "formatter": "prettier",
+      "format_on_save": "prettier"
     },
     "JSON": {
-      "formatter": "prettier"
+      "formatter": "prettier",
+      "format_on_save": "prettier"
     },
     "Markdown": {
-      "formatter": "prettier"
+      "formatter": "prettier",
+      "format_on_save": "prettier"
     },
     "Svelte": {
       "formatter": "prettier",
@@ -117,34 +142,32 @@
         "source.fixAll": true,
         "source.fixAll.eslint": true
       },
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": [
-            "--stdin-filepath",
-            "{buffer_path}"
-          ]
-        }
-      }
+      "format_on_save": "prettier"
     },
     "TSX": {
       "code_actions_on_format": {
         "source.fixAll": true,
         "source.fixAll.eslint": true
       },
+      "format_on_save": "prettier"
+    },
+    "PHP": {
+      "formatter": "language_server",
       "format_on_save": {
         "external": {
-          "command": "prettier",
+          "command": "bash",
           "arguments": [
-            "--stdin-filepath",
-            "{buffer_path}"
+            "-c",
+            "temp=$(mktemp) && cat > $temp && ./vendor/bin/pint --quiet $temp && cat $temp"
           ]
         }
       }
-    }
+    },
   },
   "file_scan_inclusions": [
     ".env",
+    "laravel.log",
+    "query.log"
   ],
   "code_actions_on_format": {
     "source.fixAll.eslint": true,

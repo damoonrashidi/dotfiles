@@ -6,7 +6,7 @@
   },
   "edit_predictions": {
     "mode": "subtle",
-    "enabled_in_assistant": true
+    "enabled_in_text_threads": true
   },
   "show_wrap_guides": false,
   "git_panel": {
@@ -22,7 +22,7 @@
   },
   "theme": {
     "dark": "Rosé Pine Moon",
-    "light": "Rosé Pine Moon",
+    "light": "Rosé Pine Dawn",
     "mode": "system"
   },
   "indent_guides": {
@@ -55,7 +55,7 @@
     "line_numbers": false,
     "code_actions": false
   },
-  "ui_font_size": 13,
+  "ui_font_size": 11,
   "buffer_font_size": 11,
   "buffer_line_height": {
     "custom": 2.5
@@ -65,7 +65,9 @@
     "calt": true,
     "liga": true
   },
-  "assistant": {
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
@@ -99,7 +101,7 @@
   },
   "terminal": {
     "copy_on_select": true,
-    "dock": "right",
+    "dock": "bottom",
     "button": false,
     "default_width": 200,
     "line_height": {

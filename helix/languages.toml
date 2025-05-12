@@ -23,6 +23,22 @@ file-types = ["cs"]
 comment-token = "//"
 indent = { tab-width = 4, unit = "    " }
 
+[language-server.phpactor]
+command = "phpactor"
+args = ["language-server"]
+
+[[language]]
+name = "php"
+scope = "source.php"
+injection-regex = "php"
+file-types = ["php", "inc", "php4", "php5", "phtml", "ctp"]
+shebangs = ["php"]
+roots = ["composer.json", "index.php"]
+comment-token = "//"
+language-servers = [ "intelephense", "phpactor" ]
+indent = { tab-width = 4, unit = "    " }
+formatter = { command = "bash", args = ['temp=$(mktemp) && cat > $temp && ./vendor/bin/pint --quiet $temp && cat $temp']}
+
 
 [language-server.svelteserver.config.configuration.typescript]
 inlayHints.parameterTypes.enabled = true
